@@ -1,0 +1,27 @@
+.app-section-label {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  margin: 0;
+  padding-block: var(--space-2);
+  padding-inline-start: var(--space-4);
+  border-inline-start: 2px solid var(--color-accent);
+  font-size: var(--font-size-label);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
+}
+
+.app-section-label__index {
+  color: var(--color-interactive);
+  font-variant-numeric: tabular-nums;
+}
+
+.app-section-label__slash {
+  color: var(--color-accent);
+}
+
+.app-section-label__title {
+  color: var(--color-text-muted);
+}

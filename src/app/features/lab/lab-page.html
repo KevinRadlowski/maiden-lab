@@ -1,2 +1,199 @@
-<h1>Lab</h1>
-<p>Contenu en préparation.</p>
+<app-container size="wide">
+  <header class="lab-header">
+    <p class="text-label text-muted">Design System</p>
+    <h1 class="text-display">MAIDEN/LAB</h1>
+    <p class="text-body-lg text-muted text-measure">
+      Laboratoire visuel — spécimen des tokens, composants et principes éditoriaux du portfolio.
+    </p>
+    <div>
+      <app-button variant="secondary" (click)="toggleTheme()">
+        Thème {{ theme() === 'light' ? 'sombre' : 'clair' }}
+      </app-button>
+    </div>
+  </header>
+
+  <app-divider />
+
+  <section class="lab-section" aria-labelledby="lab-identity">
+    <app-section-label index="01" title="Identité" />
+    <h2 id="lab-identity" class="visually-hidden">Identité</h2>
+    <div class="lab-identity">
+      <p class="lab-brand text-display">
+        MAIDEN<span class="lab-brand__slash" aria-hidden="true">/</span>LAB
+      </p>
+      <p class="text-caption">
+        01 / MCPrévention · 02 / XBASE · Angular / TypeScript / Java / Spring
+      </p>
+      <div class="lab-tags">
+        <app-tag variant="accent">Editorial Tech</app-tag>
+        <app-tag variant="technical">Digital Studio</app-tag>
+      </div>
+    </div>
+  </section>
+
+  <section class="lab-section" aria-labelledby="lab-palette">
+    <app-section-label index="02" title="Palette" />
+    <h2 id="lab-palette" class="visually-hidden">Palette</h2>
+    <ul class="lab-swatches">
+      @for (swatch of colorSwatches; track swatch.token) {
+        <li class="lab-swatch">
+          <span
+            class="lab-swatch__sample"
+            [style.background-color]="'var(' + swatch.token + ')'"
+            [class.lab-swatch__sample--text]="swatch.token === '--color-text'"
+          ></span>
+          <span class="lab-swatch__name">{{ swatch.name }}</span>
+          <code class="lab-swatch__token">{{ swatch.token }}</code>
+        </li>
+      }
+    </ul>
+  </section>
+
+  <section class="lab-section" aria-labelledby="lab-typography">
+    <app-section-label index="03" title="Typographie" />
+    <h2 id="lab-typography" class="visually-hidden">Typographie</h2>
+    <div class="lab-type-stack">
+      <div class="lab-panel lab-panel--type">
+        <p class="text-caption">Display · Source Serif 4</p>
+        <p class="text-display">Display — présence éditoriale</p>
+      </div>
+      <div class="lab-panel lab-panel--type">
+        <p class="text-caption">H1</p>
+        <h1>Titre H1 — échelle fluide</h1>
+      </div>
+      <div class="lab-panel lab-panel--type">
+        <p class="text-caption">H2</p>
+        <h2>Titre H2 — hiérarchie éditoriale</h2>
+      </div>
+      <div class="lab-panel lab-panel--type">
+        <p class="text-caption">H3</p>
+        <h3>Titre H3 — sous-section</h3>
+      </div>
+      <div class="lab-panel lab-panel--type">
+        <p class="text-caption">Body large · DM Sans</p>
+        <p class="text-body-lg text-measure">
+          Corps large — confortable sur desktop. Accents français : élévation, ingénierie, décision.
+        </p>
+      </div>
+      <div class="lab-panel lab-panel--type">
+        <p class="text-caption">Body</p>
+        <p class="text-measure">
+          Corps standard — paragraphe de référence pour les contenus longs et les études de cas
+          futures.
+        </p>
+      </div>
+      <div class="lab-panel lab-panel--type">
+        <p class="text-caption">Body small · Label · Caption</p>
+        <p class="text-body-sm text-muted">
+          Corps small — métadonnées et informations secondaires.
+        </p>
+        <p class="text-label">Label — navigation et annotations</p>
+        <p class="text-caption">Caption — repère technique 01 / palette</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lab-section" aria-labelledby="lab-spacing">
+    <app-section-label index="04" title="Spacing" />
+    <h2 id="lab-spacing" class="visually-hidden">Spacing</h2>
+    <ul class="lab-panel lab-spacing-list">
+      @for (sample of spacingSamples; track sample.name) {
+        <li class="lab-spacing-item">
+          <div class="lab-spacing-item__track">
+            <span class="lab-spacing-item__bar" [style.width]="sample.size"></span>
+          </div>
+          <span class="lab-spacing-item__label">
+            <code>{{ sample.name }}</code>
+            <span>{{ sample.value }}</span>
+          </span>
+        </li>
+      }
+    </ul>
+  </section>
+
+  <section class="lab-section" aria-labelledby="lab-buttons">
+    <app-section-label index="05" title="Boutons" />
+    <h2 id="lab-buttons" class="visually-hidden">Boutons</h2>
+    <div class="lab-flow">
+      <app-button variant="primary">Primary</app-button>
+      <app-button variant="secondary">Secondary</app-button>
+      <app-button variant="ghost">Ghost</app-button>
+      <app-button variant="primary" [disabled]="true">Disabled</app-button>
+    </div>
+  </section>
+
+  <section class="lab-section" aria-labelledby="lab-links">
+    <app-section-label index="06" title="Liens" />
+    <h2 id="lab-links" class="visually-hidden">Liens</h2>
+    <div class="lab-flow lab-flow--col">
+      <app-text-link href="/projets">Voir le projet</app-text-link>
+      <app-text-link href="https://github.com" [external]="true">GitHub</app-text-link>
+      <app-text-link href="/projets/xbase">Découvrir XBASE</app-text-link>
+    </div>
+  </section>
+
+  <section class="lab-section" aria-labelledby="lab-tags">
+    <app-section-label index="07" title="Tags" />
+    <h2 id="lab-tags" class="visually-hidden">Tags</h2>
+    <div class="lab-flow">
+      <app-tag>Default</app-tag>
+      <app-tag variant="accent">Accent</app-tag>
+      <app-tag variant="technical">Angular 22</app-tag>
+    </div>
+  </section>
+
+  <section class="lab-section" aria-labelledby="lab-surfaces">
+    <app-section-label index="08" title="Surfaces" />
+    <h2 id="lab-surfaces" class="visually-hidden">Surfaces</h2>
+    <div class="lab-surfaces">
+      <div class="lab-surface lab-surface--bg">Background</div>
+      <div class="lab-surface lab-surface--default">Surface</div>
+      <div class="lab-surface lab-surface--muted">Surface muted</div>
+      <div class="lab-surface lab-surface--elevated">Surface elevated</div>
+    </div>
+  </section>
+
+  <section class="lab-section" aria-labelledby="lab-borders">
+    <app-section-label index="09" title="Bordures" />
+    <h2 id="lab-borders" class="visually-hidden">Bordures</h2>
+    <div class="lab-borders">
+      <div class="lab-border lab-border--subtle">Subtle</div>
+      <div class="lab-border lab-border--default">Default</div>
+      <div class="lab-border lab-border--strong">Strong</div>
+    </div>
+  </section>
+
+  <section class="lab-section" aria-labelledby="lab-layout">
+    <app-section-label index="10" title="Layout" />
+    <h2 id="lab-layout" class="visually-hidden">Layout et grille</h2>
+    <div class="grid-editorial lab-grid-demo" aria-hidden="true">
+      @for (col of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]; track col) {
+        <span class="lab-grid-col">{{ col }}</span>
+      }
+    </div>
+    <p class="text-caption">Grille éditoriale 12 colonnes (6 en tablette, 1 en mobile).</p>
+  </section>
+
+  <section class="lab-section" aria-labelledby="lab-focus">
+    <app-section-label index="11" title="Focus" />
+    <h2 id="lab-focus" class="visually-hidden">Focus</h2>
+    <div class="lab-panel">
+      <p class="text-body-sm text-muted text-measure">
+        Tabulation clavier : focus visible sur les éléments interactifs ci-dessous.
+      </p>
+      <div class="lab-flow">
+        <app-button variant="primary">Focus test</app-button>
+        <app-text-link href="/contact">Lien focus</app-text-link>
+      </div>
+    </div>
+  </section>
+
+  <section class="lab-section" aria-labelledby="lab-dark">
+    <app-section-label index="12" title="Dark mode" />
+    <h2 id="lab-dark" class="visually-hidden">Dark mode</h2>
+    <p class="text-measure text-muted">
+      Tokens sémantiques adaptés via <code>[data-theme='dark']</code>. Utilisez le bouton en tête de
+      page pour basculer le thème dans ce laboratoire.
+    </p>
+  </section>
+</app-container>

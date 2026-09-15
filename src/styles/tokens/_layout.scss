@@ -1,0 +1,45 @@
+:root {
+  --container-narrow: 40rem;
+  --container-default: 76rem;
+  --container-wide: 90rem;
+
+  --gutter: clamp(1.25rem, 0.5rem + 2.5vw, 2.5rem);
+  --grid-columns: 12;
+  --grid-gap: var(--space-4);
+}
+
+.container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.container--narrow {
+  max-width: calc(var(--container-narrow) + var(--gutter) * 2);
+}
+
+.container--default {
+  max-width: calc(var(--container-default) + var(--gutter) * 2);
+}
+
+.container--wide {
+  max-width: calc(var(--container-wide) + var(--gutter) * 2);
+}
+
+.grid-editorial {
+  display: grid;
+  gap: var(--grid-gap);
+  grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
+}
+
+@media (max-width: 767px) {
+  .grid-editorial {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .grid-editorial {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}

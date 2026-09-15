@@ -1,77 +1,211 @@
-# Design system
+# Design system — MAIDEN/LAB
 
-Principes et direction pour l'identité visuelle de Maiden Lab. **Aucun CSS, token ni composant n'existe encore.** Ce document définit uniquement l'approche cible.
+Documentation du design system fondamental (LOT 02). Direction : **Editorial Tech / Digital Studio**.
 
-## Direction de marque
+## Philosophie
 
-**MAIDEN / LAB**
+MAIDEN/LAB doit évoquer un studio numérique ou une agence expérimentée : rigueur, précision typographique, espace négatif, traits fins, numérotation technique. Les effets graphiques restent secondaires.
 
-Positionnement : studio numérique personnel / portfolio d'ingénierie.
+### Anti-patterns explicitement évités
 
-Le langage visuel doit être éditorial, premium et humain — pas un template assemblé à partir des clichés habituels des portfolios développeurs.
+- Dégradés bleu/violet omniprésents, blobs, glow permanent
+- Glassmorphism généralisé, cartes flottantes partout
+- Border-radius excessif façon SaaS
+- Animations décoratives par défaut
+- Couleurs primitives hardcodées dans les composants
+- Inter/Arial comme seule identité typographique
 
-## Clichés explicitement évités
+Le slash `/` fait partie du vocabulaire graphique (MAIDEN/LAB, `01 / MCPrévention`) mais reste discret.
 
-Ne pas retomber dans les patterns qui signalent un « dev portfolio générique » :
+## Architecture SCSS
 
-- dégradés violets omniprésents ;
-- glassmorphism systématique ;
-- blobs décoratifs sans fonction ;
-- animations gratuites ;
-- fausses interfaces terminal ;
-- murs de logos sans narration ;
-- copy générique du type « I build digital experiences ».
+```
+src/styles/
+  tokens/
+    _color.scss       — primitifs + sémantiques light/dark
+    _typography.scss  — familles, échelle fluide
+    _spacing.scss     — échelle d'espacement
+    _layout.scss      — containers, grille éditoriale
+    _radius.scss      — rayons
+    _shadow.scss      — ombres (usage limité)
+    _motion.scss      — durées, easing, reduced-motion
+    _z-index.scss     — échelle de superposition
+  base/
+    _reset.scss
+    _document.scss    — body, headings, focus, utilitaires texte
+```
 
-Chaque choix visuel doit servir la lisibilité, la hiérarchie ou la reconnaissance de marque.
+Point d'entrée : `src/styles.scss` (tokens + base). Polices chargées via `angular.json` (Fontsource).
 
-## Principes de design
+## Primitifs vs sémantiques
 
-- **Éditorial** — mise en page guidée par le contenu, hiérarchie typographique forte.
-- **Premium** — palette retenue, espacements généreux, détails travaillés.
-- **Sobre** — moins d'éléments, chacun avec un rôle clair.
-- **Humain** — ton accessible dans les textes ; pas de boilerplate corporate.
-- **Précision typographique** — échelle de tailles, interlignage et césure intentionnels.
-- **Espaces généreux** — laisser respirer le contenu.
-- **Grille maîtrisée** — rythme cohérent avec place pour une asymétrie intentionnelle.
-- **Détails graphiques discrets** — motifs d'accent utilisés avec parcimonie.
+| Type        | Exemples                                   | Usage                         |
+| ----------- | ------------------------------------------ | ----------------------------- |
+| Primitifs   | `--blue-500`, `--neutral-900`, `--space-4` | Définition des tokens, `/lab` |
+| Sémantiques | `--color-text`, `--color-surface-muted`    | Composants et pages           |
 
-## Éléments d'identité prévus
+**Règle :** dans un composant, préférer `var(--color-text-link)` à `var(--blue-600)`.
 
-| Élément    | Direction                                                             |
-| ---------- | --------------------------------------------------------------------- |
-| Fond       | Base ivoire / blanc chaud                                             |
-| Texte      | Tons graphite pour corps et titres                                    |
-| Accent     | Indigo/violet utilisé avec parcimonie pour l'emphase et l'interaction |
-| Motif      | Slash `/` comme élément graphique potentiel (MAIDEN/LAB)              |
-| Dark theme | Conçu séparément — pas une simple inversion du mode clair             |
+## Palette
 
-Les valeurs finales seront définies sous forme de design tokens lors du lot d'implémentation UI.
+### Primitifs principaux
 
-## Catégories de tokens futures
+| Token           | Valeur    | Rôle                  |
+| --------------- | --------- | --------------------- |
+| `--neutral-50`  | `#F7F7F4` | Fond clair            |
+| `--neutral-100` | `#EFEFEB` | Surface muted claire  |
+| `--neutral-900` | `#17171A` | Texte principal clair |
+| `--neutral-500` | `#66666F` | Texte secondaire      |
+| `--blue-500`    | `#315CF5` | Bleu signature        |
+| `--blue-600`    | `#2444C7` | Bleu profond / liens  |
+| `--violet-500`  | `#7557E8` | Violet signature      |
+| `--violet-600`  | `#5637BC` | Violet profond        |
+| `--neutral-950` | `#111114` | Fond dark             |
 
-Les tokens seront organisés selon les catégories suivantes. **Aucune valeur n'est définie dans ce lot.**
+### Tokens sémantiques (extrait)
 
-| Catégorie     | Rôle                                                        |
-| ------------- | ----------------------------------------------------------- |
-| `color`       | Fond, texte, accent, états sémantiques                      |
-| `typography`  | Familles, tailles, graisses, interlignages                  |
-| `spacing`     | Échelle de marges, paddings et gaps                         |
-| `radius`      | Échelle de border-radius                                    |
-| `shadow`      | Élévation et profondeur                                     |
-| `motion`      | Durées, easing, alternatives reduced-motion                 |
-| `breakpoints` | Seuils de layout responsive                                 |
-| `z-index`     | Échelle de superposition pour overlays, navigation, modales |
+| Token                 | Light           | Dark (override) |
+| --------------------- | --------------- | --------------- |
+| `--color-background`  | `--neutral-50`  | `--neutral-950` |
+| `--color-surface`     | `--neutral-0`   | `#18181D`       |
+| `--color-text`        | `--neutral-900` | `#F2F2F4`       |
+| `--color-text-muted`  | `--neutral-500` | `#A0A0AA`       |
+| `--color-interactive` | `--blue-600`    | `--blue-400`    |
+| `--color-accent`      | `--violet-500`  | `--violet-400`  |
+| `--color-focus-ring`  | `--blue-500`    | `--blue-400`    |
 
-L'implémentation vivra sous `src/styles/tokens/` une fois l'application existante. Voir [../architecture/README.md](../architecture/README.md) pour les sujets d'architecture associés.
+Surfaces limitées : background, surface, surface-muted, surface-elevated (si nécessaire).
 
-## Accessibilité et motion
+## Contrastes vérifiés (WCAG 2.2 AA)
 
-- Respecter `prefers-reduced-motion`.
-- Maintenir un contraste suffisant en mode clair et en dark theme.
-- Les états de focus doivent être visibles et cohérents.
-- Le mouvement aide à la compréhension ; il ne décore pas des écrans au repos.
+Ratios calculés (contraste relatif luminance) :
+
+| Combinaison                           | Ratio  | Cible   | Statut                                 |
+| ------------------------------------- | ------ | ------- | -------------------------------------- |
+| Texte `#17171A` sur fond `#F7F7F4`    | 16.7:1 | ≥ 4.5:1 | OK                                     |
+| Texte muted `#66666F` sur `#F7F7F4`   | 5.3:1  | ≥ 4.5:1 | OK                                     |
+| Lien `#2444C7` sur `#F7F7F4`          | 7.2:1  | ≥ 4.5:1 | OK                                     |
+| Blanc `#FFFFFF` sur bouton `#315CF5`  | 5.3:1  | ≥ 4.5:1 | OK                                     |
+| Texte `#F2F2F4` sur fond `#111114`    | 16.9:1 | ≥ 4.5:1 | OK                                     |
+| Texte muted `#A0A0AA` sur `#111114`   | 7.3:1  | ≥ 4.5:1 | OK                                     |
+| Lien `#4D74F7` sur `#111114`          | 4.6:1  | ≥ 4.5:1 | OK                                     |
+| Texte `#F2F2F4` sur surface `#18181D` | 15.8:1 | ≥ 4.5:1 | OK                                     |
+| Texte subtle `#8A8A94` sur `#F7F7F4`  | 3.2:1  | ≥ 4.5:1 | Caption uniquement (grand texte ≥ 3:1) |
+
+`--color-text-subtle` ne doit pas porter de paragraphes longs ; réservé aux captions, repères techniques et métadonnées courtes.
+
+## Typographie
+
+| Famille        | Rôle                       | Graisses | Licence |
+| -------------- | -------------------------- | -------- | ------- |
+| DM Sans        | UI, corps, labels, boutons | 400–600  | OFL 1.1 |
+| Source Serif 4 | Display, h1–h3             | 500–600  | OFL 1.1 |
+
+Source : packages npm `@fontsource/dm-sans` et `@fontsource/source-serif-4` ([fontsource.dev](https://fontsource.dev)).
+
+### Échelle
+
+| Classe / élément | Token taille              |
+| ---------------- | ------------------------- |
+| `.text-display`  | `--font-size-display`     |
+| `h1`             | `--font-size-h1`          |
+| `h2`             | `--font-size-h2`          |
+| `h3`             | `--font-size-h3`          |
+| `.text-body-lg`  | `--font-size-body-lg`     |
+| body             | `--font-size-body` (1rem) |
+| `.text-body-sm`  | `--font-size-body-sm`     |
+| `.text-label`    | `--font-size-label`       |
+| `.text-caption`  | `--font-size-caption`     |
+
+Mesure de lecture : `--font-measure` (38rem), `--font-measure-wide` (48rem).
+
+## Spacing
+
+Échelle : `--space-1` (0.25rem) à `--space-24` (clamp éditorial). Tokens composés : `--section-gap`, `--stack-gap`.
+
+Ne pas introduire de valeurs arbitraires (ex. `37px`) sans justification documentée.
+
+## Layout
+
+| Classe / composant   | Max-width | Usage                     |
+| -------------------- | --------- | ------------------------- |
+| `container--narrow`  | 40rem     | Lecture, prose            |
+| `container--default` | 76rem     | Pages standard            |
+| `container--wide`    | 90rem     | Grilles, laboratoire      |
+| `.grid-editorial`    | 12 col.   | Compositions asymétriques |
+
+Gutters : `--gutter` (clamp responsive). Mobile : grille en 1 colonne ; tablette : 6 colonnes.
+
+## Surfaces, bordures, radius, ombres
+
+- **Bordures :** `--color-border-subtle`, `--color-border`, `--color-border-strong`
+- **Radius :** `--radius-sm`, `--radius-md`, `--radius-lg`, `--radius-pill` (usage parcimonieux)
+- **Ombres :** `--shadow-sm`, `--shadow-md` — uniquement pour une élévation réelle
+
+## Motion
+
+| Token                 | Valeur            |
+| --------------------- | ----------------- |
+| `--duration-fast`     | 120ms             |
+| `--duration-normal`   | 200ms             |
+| `--duration-slow`     | 320ms             |
+| `--easing-standard`   | cubic-bezier(...) |
+| `--easing-emphasized` | cubic-bezier(...) |
+
+`@media (prefers-reduced-motion: reduce)` : durées et transitions réduites à 0.01ms.
+
+## Thèmes
+
+- Défaut : light (`:root`)
+- Dark : `[data-theme='dark']` sur `<html>`
+- Toggle de démonstration sur `/lab` ; persistance globale au lot navigation
+
+## Composants UI
+
+| Composant    | Sélecteur           | API principale                          |
+| ------------ | ------------------- | --------------------------------------- |
+| Button       | `app-button`        | `variant`, `disabled`, `type`           |
+| TextLink     | `app-text-link`     | `href`, `external`, `showArrow`         |
+| Tag          | `app-tag`           | `variant`: default / accent / technical |
+| SectionLabel | `app-section-label` | `index`, `title`                        |
+| Divider      | `app-divider`       | `strong`                                |
+| Container    | `app-container`     | `size`: narrow / default / wide         |
+
+### Button
+
+Variantes : `primary`, `secondary`, `ghost`. États : default, hover, active, focus-visible (global), disabled. Min-height 2.75rem pour cible tactile.
+
+### TextLink
+
+Pattern éditorial avec flèche ↗ pour liens externes. Hover : underline + décalage discret.
+
+### Focus
+
+`:focus-visible` global — outline 2px `--color-focus-ring`, offset 2px. Ne jamais supprimer l'outline sans remplacement.
+
+## Accessibilité
+
+- Cible WCAG 2.2 AA
+- Contrastes documentés ci-dessus
+- Focus visible sur tous les interactifs
+- Headings structurés ; labels de section avec titres masqués visuellement si redondants
+- `prefers-reduced-motion` respecté
+- Icônes décoratives : `aria-hidden="true"` quand pertinent
+
+## Laboratoire `/lab`
+
+Page spécimen (pas un faux portfolio). Sections : Identité, Palette, Typographie, Spacing, Boutons, Liens, Tags, Surfaces, Bordures, Layout/grille, Focus, Dark mode.
+
+## Règles d'utilisation
+
+1. Tokens sémantiques d'abord
+2. Peu de surfaces — privilégier espace et typographie
+3. Accents bleu/violet avec parcimonie
+4. Pas de librairie UI externe
+5. Pas de styles inline ni couleurs hardcodées dans les composants
+6. Tests unitaires sur les primitives ; E2E sur `/lab`
 
 ## Documentation associée
 
-- [ARCHITECTURE.md](../../ARCHITECTURE.md) — structure du répertoire `styles/`
-- [../case-studies/README.md](../case-studies/README.md) — principes de présentation des études de cas
+- [ADR-006 — Fondations du design system](../decisions/ADR-006-design-system-foundation.md)
+- [ARCHITECTURE.md](../../ARCHITECTURE.md)

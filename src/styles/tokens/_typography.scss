@@ -1,0 +1,31 @@
+:root {
+  --font-family-sans: 'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-family-display: 'Source Serif 4', 'Georgia', 'Times New Roman', serif;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+
+  --font-size-display: clamp(2.5rem, 1.85rem + 2.2vw, 4.25rem);
+  --font-size-h1: clamp(2rem, 1.55rem + 1.5vw, 3rem);
+  --font-size-h2: clamp(1.625rem, 1.35rem + 1vw, 2.25rem);
+  --font-size-h3: clamp(1.375rem, 1.2rem + 0.45vw, 1.625rem);
+  --font-size-body-lg: clamp(1.125rem, 1.05rem + 0.25vw, 1.25rem);
+  --font-size-body: clamp(1rem, 0.98rem + 0.1vw, 1.0625rem);
+  --font-size-body-sm: clamp(0.9375rem, 0.9rem + 0.1vw, 1rem);
+  --font-size-label: clamp(0.8125rem, 0.78rem + 0.08vw, 0.875rem);
+  --font-size-caption: 0.8125rem;
+
+  --line-height-display: 1.1;
+  --line-height-heading: 1.2;
+  --line-height-body: 1.6;
+  --line-height-tight: 1.35;
+
+  --letter-spacing-display: -0.02em;
+  --letter-spacing-heading: -0.015em;
+  --letter-spacing-label: 0.04em;
+  --letter-spacing-caption: 0.02em;
+
+  --font-measure: 42rem;
+  --font-measure-wide: 52rem;
+}

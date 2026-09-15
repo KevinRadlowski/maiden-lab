@@ -16,6 +16,18 @@ Aucune version n'a encore été publiée. Les entrées ci-dessous suivent le tra
 - Structure applicative par features avec pages placeholders.
 - Toolchain qualité : ESLint, Prettier, Vitest, Playwright.
 - ADR-003 (fondations Angular), ADR-004 (stratégie de rendu), ADR-005 (npm).
+- Design system LOT 02 : tokens SCSS (primitifs + sémantiques light/dark).
+- Typographies self-hosted DM Sans + Source Serif 4 (Fontsource, OFL).
+- Primitives UI : Button, TextLink, Tag, SectionLabel, Divider, Container.
+- Page laboratoire `/lab` pour contrôle visuel du design system.
+- ADR-006 — fondations du design system.
+
+### Changed (LOT 02.1)
+
+- Calibration visuelle : containers élargis, typographie recalibrée, rythme vertical régulier.
+- Spécimens `/lab` enrichis (palette, spacing, surfaces, grille, focus).
+- Accents d'identité discrets (section-label, sélection, slash).
+- Fonts limitées aux subsets latin + latin-ext (~141 KB WOFF2 bundlées).
 
 ### Changed
 

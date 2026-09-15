@@ -1,49 +1,65 @@
 .shell {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 .shell__header {
-  padding: 1rem 1.5rem;
-  border-bottom: 1px solid #e5e5e5;
+  padding: var(--space-4) var(--gutter);
+  border-bottom: 1px solid var(--color-border-subtle);
 }
 
 .shell__brand {
-  font-weight: 600;
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-body-lg);
+  font-weight: var(--font-weight-semibold);
   text-decoration: none;
+  color: var(--color-text);
 }
 
 .shell__nav {
-  margin-top: 0.75rem;
+  margin-top: var(--space-3);
 }
 
 .shell__nav-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem 1rem;
-  list-style: none;
+  gap: var(--space-3) var(--space-4);
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .shell__nav-link {
+  font-size: var(--font-size-body-sm);
+  font-weight: var(--font-weight-medium);
   text-decoration: none;
+  color: var(--color-text-muted);
+  transition: color var(--duration-fast) var(--easing-standard);
+
+  &:hover {
+    color: var(--color-text);
+  }
 }
 
 .shell__nav-link--active {
+  color: var(--color-interactive);
   text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 
 .shell__main {
   flex: 1;
-  padding: 1.5rem;
-  max-width: 48rem;
+  width: 100%;
 }
 
 .shell__footer {
-  padding: 1rem 1.5rem;
-  border-top: 1px solid #e5e5e5;
-  font-size: 0.875rem;
-  color: #555;
+  padding: var(--space-4) var(--gutter);
+  border-top: 1px solid var(--color-border-subtle);
+  font-size: var(--font-size-body-sm);
+  color: var(--color-text-subtle);
+}
+
+.shell__footer p {
+  margin: 0;
 }

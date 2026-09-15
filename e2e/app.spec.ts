@@ -25,3 +25,34 @@ test.describe('Navigation publique', () => {
     await expect(page.getByRole('heading', { level: 1, name: 'Page introuvable' })).toBeVisible();
   });
 });
+
+test.describe('Laboratoire design system (/lab)', () => {
+  test('affiche le spécimen principal et les sections clés', async ({ page }) => {
+    await page.goto('/lab');
+
+    await expect(page.getByRole('heading', { level: 1, name: 'MAIDEN/LAB' })).toBeVisible();
+    await expect(page.locator('.lab-swatches')).toBeVisible();
+    await expect(page.locator('.lab-type-stack')).toBeVisible();
+    await expect(page.locator('app-button').first()).toBeVisible();
+    await expect(page.locator('app-text-link').first()).toBeVisible();
+    await expect(page.locator('app-tag').first()).toBeVisible();
+  });
+
+  test('permet de basculer le thème sombre', async ({ page }) => {
+    await page.goto('/lab');
+
+    await page.getByRole('button', { name: /Thème sombre/i }).click();
+    await expect(page.locator('html[data-theme="dark"]')).toBeVisible();
+
+    await page.getByRole('button', { name: /Thème clair/i }).click();
+    await expect(page.locator('html[data-theme="dark"]')).toHaveCount(0);
+  });
+
+  test('conserve une navigation clavier élémentaire', async ({ page }) => {
+    await page.goto('/lab');
+
+    await page.keyboard.press('Tab');
+    const focusedTag = await page.evaluate(() => document.activeElement?.tagName);
+    expect(['A', 'BUTTON', 'INPUT']).toContain(focusedTag);
+  });
+});

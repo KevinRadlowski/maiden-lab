@@ -1,0 +1,106 @@
+// Primitives — ne pas utiliser directement dans les composants pour un rôle sémantique
+
+:root {
+  --neutral-0: #ffffff;
+  --neutral-50: #f7f7f4;
+  --neutral-100: #efefeb;
+  --neutral-200: #dadae0;
+  --neutral-400: #8a8a94;
+  --neutral-500: #66666f;
+  --neutral-700: #3a3a42;
+  --neutral-900: #17171a;
+  --neutral-950: #111114;
+
+  --blue-400: #4d74f7;
+  --blue-500: #315cf5;
+  --blue-600: #2444c7;
+  --blue-700: #1c3699;
+
+  --violet-400: #8f73ed;
+  --violet-500: #7557e8;
+  --violet-600: #5637bc;
+  --violet-700: #452d96;
+
+  /* Semantic — light (default) */
+  --color-background: var(--neutral-50);
+  --color-surface: var(--neutral-0);
+  --color-surface-muted: var(--neutral-100);
+  --color-surface-elevated: var(--neutral-0);
+
+  --color-text: var(--neutral-900);
+  --color-text-muted: var(--neutral-500);
+  --color-text-subtle: var(--neutral-400);
+  --color-text-inverse: var(--neutral-0);
+
+  --color-border-subtle: color-mix(in srgb, var(--neutral-200) 60%, transparent);
+  --color-border: var(--neutral-200);
+  --color-border-strong: var(--neutral-400);
+
+  --color-interactive: var(--blue-600);
+  --color-interactive-hover: var(--blue-700);
+  --color-interactive-active: var(--blue-700);
+  --color-accent: var(--violet-500);
+  --color-accent-subtle: color-mix(in srgb, var(--violet-500) 12%, var(--neutral-50));
+
+  --color-text-link: var(--blue-600);
+  --color-text-link-hover: var(--blue-700);
+
+  --color-focus-ring: var(--blue-500);
+  --color-focus-offset: var(--color-background);
+
+  --color-button-primary-bg: var(--blue-500);
+  --color-button-primary-bg-hover: var(--blue-600);
+  --color-button-primary-text: var(--neutral-0);
+
+  --color-button-secondary-bg: transparent;
+  --color-button-secondary-bg-hover: var(--neutral-100);
+  --color-button-secondary-text: var(--neutral-900);
+  --color-button-secondary-border: var(--neutral-200);
+
+  --color-button-ghost-bg-hover: color-mix(in srgb, var(--neutral-900) 6%, transparent);
+
+  --color-selection-bg: color-mix(in srgb, var(--violet-500) 18%, var(--neutral-50));
+  --color-selection-text: var(--neutral-900);
+}
+
+[data-theme='dark'] {
+  --color-background: var(--neutral-950);
+  --color-surface: #18181d;
+  --color-surface-muted: #222228;
+  --color-surface-elevated: #2a2a32;
+
+  --color-text: #f2f2f4;
+  --color-text-muted: #a0a0aa;
+  --color-text-subtle: #787882;
+  --color-text-inverse: var(--neutral-900);
+
+  --color-border-subtle: color-mix(in srgb, #f2f2f4 8%, transparent);
+  --color-border: #33333b;
+  --color-border-strong: #4a4a55;
+
+  --color-interactive: var(--blue-400);
+  --color-interactive-hover: var(--blue-500);
+  --color-interactive-active: var(--blue-500);
+  --color-accent: var(--violet-400);
+  --color-accent-subtle: color-mix(in srgb, var(--violet-500) 18%, var(--neutral-950));
+
+  --color-text-link: var(--blue-400);
+  --color-text-link-hover: #6b92ff;
+
+  --color-focus-ring: var(--blue-400);
+  --color-focus-offset: var(--color-background);
+
+  --color-button-primary-bg: var(--blue-500);
+  --color-button-primary-bg-hover: var(--blue-400);
+  --color-button-primary-text: var(--neutral-0);
+
+  --color-button-secondary-bg: transparent;
+  --color-button-secondary-bg-hover: var(--color-surface-muted);
+  --color-button-secondary-text: var(--color-text);
+  --color-button-secondary-border: var(--color-border);
+
+  --color-button-ghost-bg-hover: color-mix(in srgb, var(--color-text) 8%, transparent);
+
+  --color-selection-bg: color-mix(in srgb, var(--violet-500) 28%, var(--neutral-950));
+  --color-selection-text: var(--color-text);
+}

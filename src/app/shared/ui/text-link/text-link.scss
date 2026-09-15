@@ -1,0 +1,31 @@
+.app-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-text-link);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-text-link) 35%, transparent);
+  transition:
+    color var(--duration-normal) var(--easing-standard),
+    border-color var(--duration-normal) var(--easing-standard),
+    gap var(--duration-normal) var(--easing-emphasized);
+
+  &:hover {
+    color: var(--color-text-link-hover);
+    border-bottom-color: var(--color-text-link-hover);
+    gap: var(--space-2);
+  }
+
+  &--static {
+    cursor: default;
+    border-bottom-color: var(--color-border);
+    color: var(--color-text);
+  }
+}
+
+.app-text-link__arrow {
+  font-size: 0.875em;
+  line-height: 1;
+}
