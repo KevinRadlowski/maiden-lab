@@ -1,48 +1,49 @@
 # Architecture Decision Records
 
-An Architecture Decision Record (ADR) captures a significant technical or product decision along with its context, consequences, and alternatives considered. ADRs provide a durable audit trail for future contributors and reviewers.
+Un Architecture Decision Record (ADR) consigne une décision technique ou produit significative, avec son contexte, ses conséquences et les alternatives étudiées. Les ADR constituent une trace durable pour les futurs contributeurs et relecteurs.
 
-## When to write an ADR
+## Quand rédiger un ADR
 
-Create an ADR when a decision:
+Créez un ADR lorsqu'une décision :
 
-- affects architecture, tooling, or deployment strategy
-- is difficult or costly to reverse
-- has trade-offs worth documenting
-- needs to be understood by someone who was not present when it was made.
+- affecte l'architecture, l'outillage ou la stratégie de déploiement ;
+- est difficile ou coûteuse à inverser ;
+- comporte des compromis qui méritent d'être documentés ;
+- doit être comprise par quelqu'un qui n'était pas présent au moment où elle a été prise.
 
-Do **not** create ADRs for trivial choices or for technologies not yet validated.
+Ne **pas** créer d'ADR pour des choix triviaux ou pour des technologies pas encore validées.
 
-## File naming
+## Nommage des fichiers
 
 ```
 ADR-XXX-short-descriptive-title.md
 ```
 
-- `XXX` is a zero-padded sequential number (e.g. `001`, `012`).
-- Use lowercase kebab-case for the title segment.
-- Example: `ADR-001-portfolio-product-strategy.md`
+- `XXX` est un numéro séquentiel zero-padded (ex. `001`, `012`).
+- Le segment titre reste en kebab-case anglais, par convention technique.
+- Exemple : `ADR-001-portfolio-product-strategy.md`
 
-## Status values
+## Valeurs de statut
 
-| Status | Meaning |
-|--------|---------|
-| **Proposed** | Under discussion; not yet adopted. |
-| **Accepted** | Decision is active and should be followed. |
-| **Superseded** | Replaced by a newer ADR; link to the successor. |
-| **Deprecated** | No longer relevant; kept for historical context. |
+| Statut | Signification |
+|--------|---------------|
+| **Proposé** | En discussion ; pas encore adopté. |
+| **Accepté** | Décision active et à suivre. |
+| **Remplacé** | Supplanté par un ADR plus récent ; lier vers le successeur. |
+| **Déprécié** | Plus pertinent ; conservé pour l'historique. |
 
 ## Workflow
 
-1. Copy [ADR-000-template.md](./ADR-000-template.md).
-2. Assign the next available number.
-3. Fill in all sections honestly — including rejected alternatives.
-4. Set status to **Proposed** and open for review, or **Accepted** if decided unilaterally for a personal project.
-5. When superseding a decision, update the old ADR's status and link both ways.
+1. Copier [ADR-000-template.md](./ADR-000-template.md).
+2. Attribuer le prochain numéro disponible.
+3. Remplir toutes les sections honnêtement — y compris les alternatives rejetées.
+4. Mettre le statut à **Proposé** et ouvrir à la relecture, ou **Accepté** si la décision est prise unilatéralement (projet personnel).
+5. Lors du remplacement d'une décision, mettre à jour le statut de l'ancien ADR et créer des liens réciproques.
 
 ## Index
 
-| ADR | Title | Status |
+| ADR | Titre | Statut |
 |-----|-------|--------|
 | [ADR-000](./ADR-000-template.md) | Template | — |
-| [ADR-001](./ADR-001-portfolio-product-strategy.md) | Portfolio product strategy | Accepted |
+| [ADR-001](./ADR-001-portfolio-product-strategy.md) | Stratégie produit du portfolio | Accepté |
+| [ADR-002](./ADR-002-documentation-language.md) | Langue de la documentation | Accepté |

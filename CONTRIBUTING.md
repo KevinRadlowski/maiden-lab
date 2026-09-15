@@ -1,72 +1,72 @@
-# Contributing to Maiden Lab
+# Contribuer à Maiden Lab
 
-Thank you for your interest in this project. Maiden Lab is primarily a personal portfolio, but the repository is structured to be readable and maintainable by any developer who might review or contribute.
+Merci de l'intérêt porté à ce projet. Maiden Lab est avant tout un portfolio personnel, mais le dépôt est structuré pour être lisible et maintenable par tout développeur amené à le consulter ou à y contribuer.
 
-## Development philosophy
+## Philosophie de développement
 
-Code in this repository should prioritize:
+Le code de ce dépôt doit privilégier :
 
-- **Readability** — another developer should understand intent without guessing.
-- **Simplicity** — the simplest correct solution wins.
-- **Explicit responsibilities** — each module, service, or component has a clear role.
-- **Descriptive naming** — names reveal purpose, not implementation details.
-- **Small, testable units** — logic that can be verified in isolation.
-- **Strict types** — TypeScript strict mode; no implicit `any`.
-- **No premature abstraction** — extract patterns only when repetition is proven.
+- **Lisibilité** — un autre développeur doit comprendre l'intention sans deviner.
+- **Simplicité** — la solution correcte la plus simple l'emporte.
+- **Responsabilités explicites** — chaque module, service ou composant a un rôle clair.
+- **Noms descriptifs** — les noms expriment l'intention, pas l'implémentation.
+- **Petites unités testables** — une logique vérifiable de façon isolée.
+- **Typage strict** — TypeScript en mode `strict` ; pas de `any` implicite.
+- **Pas d'abstraction prématurée** — extraire un pattern seulement lorsque la répétition est avérée.
 
-### Comments explain why, not what
+### Commentaires : expliquer le pourquoi, pas le quoi
 
-A comment should not paraphrase an obvious line of code. Use comments to explain non-obvious business rules, trade-offs, or constraints that the code alone cannot convey.
+Un commentaire doit expliquer pourquoi le code existe ou pourquoi une décision inhabituelle a été prise, plutôt que paraphraser ce que le code fait déjà clairement. Réservez les commentaires aux règles métier non évidentes, aux compromis et aux contraintes que le code seul ne peut pas transmettre.
 
 ```typescript
-// Bad: increment the counter
+// Mauvais : incrémenter le compteur
 counter++;
 
-// Good: debounce window must exceed the animation duration to avoid layout thrashing
+// Bon : la fenêtre de debounce doit dépasser la durée de l'animation pour éviter le layout thrashing
 const DEBOUNCE_MS = 350;
 ```
 
-## Git workflow
+## Workflow Git
 
-### Canonical branch
+### Branche canonique
 
-`main` is the canonical branch.
+`main` est la branche de référence.
 
-### Branch naming (future convention)
+### Nommage des branches (convention future)
 
-Do not create branches unless explicitly requested for a given task. When branching is needed, use:
+Ne créez pas de branche sauf demande explicite pour une tâche donnée. Lorsqu'une branche est nécessaire, utilisez :
 
-| Prefix | Use case |
-|--------|----------|
-| `feat/<scope>` | New feature |
-| `fix/<scope>` | Bug fix |
-| `docs/<scope>` | Documentation only |
-| `chore/<scope>` | Maintenance, tooling setup |
-| `refactor/<scope>` | Refactoring without behavior change |
-| `test/<scope>` | Test additions or improvements |
+| Préfixe | Usage |
+|---------|-------|
+| `feat/<scope>` | Nouvelle fonctionnalité |
+| `fix/<scope>` | Correction de bug |
+| `docs/<scope>` | Documentation uniquement |
+| `chore/<scope>` | Maintenance, mise en place d'outillage |
+| `refactor/<scope>` | Refactoring sans changement de comportement |
+| `test/<scope>` | Ajout ou amélioration de tests |
 
-Examples:
+Exemples :
 
 - `feat/projects-case-study-layout`
 - `fix/contact-form-validation`
 - `docs/adr-ssr-strategy`
 
-## Commit convention
+## Convention de commits
 
-Commits follow [Conventional Commits](https://www.conventionalcommits.org/):
+Les commits suivent [Conventional Commits](https://www.conventionalcommits.org/) :
 
 | Type | Description |
 |------|-------------|
-| `feat:` | New feature |
-| `fix:` | Bug fix |
-| `docs:` | Documentation change |
-| `refactor:` | Code change without feature or fix |
-| `test:` | Test additions or corrections |
-| `chore:` | Maintenance, dependencies, tooling |
-| `perf:` | Performance improvement |
-| `ci:` | CI/CD configuration |
+| `feat:` | Nouvelle fonctionnalité |
+| `fix:` | Correction de bug |
+| `docs:` | Modification de documentation |
+| `refactor:` | Changement de code sans feature ni fix |
+| `test:` | Ajout ou correction de tests |
+| `chore:` | Maintenance, dépendances, outillage |
+| `perf:` | Amélioration de performance |
+| `ci:` | Configuration CI/CD |
 
-Examples specific to Maiden Lab:
+Exemples propres à Maiden Lab :
 
 ```
 docs: add ADR for Angular version selection
@@ -76,46 +76,46 @@ chore: configure ESLint and Prettier
 perf(images): lazy-load project thumbnails
 ```
 
-Keep commits focused. One logical change per commit when possible.
+Gardez les commits focalisés : un changement logique par commit lorsque c'est possible.
 
 ## Pull requests
 
-When opening a pull request:
+Lors de l'ouverture d'une pull request :
 
-1. **Limit scope** — one concern per PR; avoid mixing unrelated changes.
-2. **Write a clear description** — what changed, why, and how to verify.
-3. **Include tests** — when applicable and once the test toolchain exists.
-4. **Add screenshots** — for any visual change affecting the UI.
-5. **Note accessibility impacts** — keyboard navigation, contrast, ARIA, semantics.
-6. **Note performance impacts** — bundle size, render cost, network requests.
-7. **Update documentation** — when behavior, architecture, or setup changes.
+1. **Limiter le périmètre** — une préoccupation par PR ; éviter de mélanger des changements sans lien.
+2. **Rédiger une description claire** — ce qui change, pourquoi, et comment vérifier.
+3. **Inclure des tests** — le cas échéant, une fois la toolchain de test en place.
+4. **Ajouter des captures d'écran** — pour toute modification visuelle de l'interface.
+5. **Signaler les impacts accessibilité** — navigation clavier, contraste, ARIA, sémantique.
+6. **Signaler les impacts performance** — taille du bundle, coût de rendu, requêtes réseau.
+7. **Mettre à jour la documentation** — lorsque le comportement, l'architecture ou l'installation changent.
 
-### Review expectations
+### Attentes en revue
 
-Reviewers (or the author during self-review) should verify:
+Les relecteurs (ou l'auteur en auto-revue) doivent vérifier :
 
-- Code matches stated intent.
-- No secrets or credentials are included.
-- Documentation reflects the change.
-- Accessibility and performance are not regressed without justification.
+- Le code correspond à l'intention annoncée.
+- Aucun secret ni credential n'est inclus.
+- La documentation reflète le changement.
+- L'accessibilité et la performance ne régressent pas sans justification.
 
 ## Definition of Done
 
-Use this checklist as a general guide. Items marked *planned* apply once the corresponding tooling exists.
+Utilisez cette checklist comme guide général. Les éléments marqués *prévu* s'appliquent une fois l'outillage correspondant en place.
 
-- [ ] Code compiles and runs locally *(once application exists)*
-- [ ] Lint passes *(planned)*
-- [ ] Formatting is consistent *(planned)*
-- [ ] Type checking passes *(planned)*
-- [ ] Unit tests pass for affected logic *(planned)*
-- [ ] E2E tests pass for affected flows *(planned, when relevant)*
-- [ ] Accessibility checked for UI changes *(planned tooling; manual review in the meantime)*
-- [ ] Performance impact considered for UI or data changes
-- [ ] Documentation updated if behavior or architecture changed
-- [ ] ADR created or updated for significant technical decisions
-- [ ] No secrets, tokens, or credentials committed
-- [ ] PR description is complete and accurate
+- [ ] Le code compile et s'exécute localement *(une fois l'application existante)*
+- [ ] Le lint passe *(prévu)*
+- [ ] Le formatage est cohérent *(prévu)*
+- [ ] La vérification de types passe *(prévu)*
+- [ ] Les tests unitaires passent pour la logique concernée *(prévu)*
+- [ ] Les tests E2E passent pour les parcours concernés *(prévu, le cas échéant)*
+- [ ] L'accessibilité est vérifiée pour les changements UI *(outillage prévu ; revue manuelle en attendant)*
+- [ ] L'impact performance est pris en compte pour les changements UI ou data
+- [ ] La documentation est mise à jour si le comportement ou l'architecture change
+- [ ] Un ADR est créé ou mis à jour pour les décisions techniques significatives
+- [ ] Aucun secret, token ou credential n'est commité
+- [ ] La description de la PR est complète et exacte
 
 ## Questions
 
-For questions about scope or direction, refer to [ARCHITECTURE.md](./ARCHITECTURE.md) and [docs/decisions/](./docs/decisions/) before introducing new patterns or dependencies.
+Pour toute question de périmètre ou d'orientation, consultez [ARCHITECTURE.md](./ARCHITECTURE.md) et [docs/decisions/](./docs/decisions/) avant d'introduire de nouveaux patterns ou dépendances.

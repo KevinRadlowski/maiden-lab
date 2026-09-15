@@ -1,104 +1,104 @@
 # Maiden Lab
 
-Professional portfolio and digital laboratory by **Kevin Radlowski**.
+Portfolio professionnel et laboratoire numérique de **Kevin Radlowski**.
 
-**Positioning:** Angular / Java Spring developer.
+**Positionnement :** développeur Angular / Java Spring.
 
-This repository contains the source code for the public portfolio at [https://maidenlab.fr](https://maidenlab.fr). Maiden Lab is designed as a web product — not a simple online résumé — serving both non-technical recruiters and developers who want to assess technical depth and engineering practices.
+Ce dépôt contient le code source du portfolio public disponible sur [https://maidenlab.fr](https://maidenlab.fr). Maiden Lab est conçu comme un produit web — et non comme un simple CV en ligne — à destination des recruteurs non techniques comme des développeurs souhaitant évaluer le niveau technique et les pratiques d'ingénierie.
 
-## About
+## À propos
 
-Maiden Lab presents Kevin Radlowski's professional journey, projects, and achievements. Professional experience is primarily Angular-focused; Java / Spring is practiced professionally and reinforced through several personal full-stack projects.
+Maiden Lab présente le parcours professionnel, les projets et les réalisations de Kevin Radlowski. L'expérience professionnelle est principalement orientée Angular ; Java / Spring est pratiqué en contexte professionnel et consolidé sur plusieurs projets personnels full-stack.
 
-The portfolio itself is a technical deliverable: code quality, architecture, accessibility, performance, and documentation are held to the same standard as a product shipped in a professional context.
+Le portfolio lui-même constitue une démonstration technique : qualité de code, architecture, accessibilité, performance et documentation sont traités avec le même niveau d'exigence qu'un produit livré en contexte professionnel.
 
-## Purpose
+## Objectif
 
-This repository aims to:
+Ce dépôt vise à :
 
-- present projects and achievements in a credible, in-depth manner
-- demonstrate engineering practices directly
-- provide a public, readable, and maintainable GitHub base
-- document technical decisions and architecture explicitly
+- présenter les projets et réalisations de manière crédible et approfondie ;
+- démontrer directement les pratiques d'ingénierie ;
+- fournir une base GitHub publique, lisible et maintenable ;
+- documenter explicitement les décisions techniques et l'architecture.
 
-## Current status
+## État actuel
 
-**LOT 00 — Repository foundation.** At this stage, the repository contains governance documentation and engineering guidelines only.
+**LOT 00 — Fondations du dépôt.** À ce stade, le repository contient uniquement la documentation de gouvernance et les règles d'ingénierie.
 
-- Application runtime: **not implemented yet**
-- Angular bootstrap: **planned** (LOT 01)
-- CI/CD pipeline: **not implemented yet**
-- Deployment configuration: **not implemented yet**
+- Runtime applicatif : **pas encore implémenté**
+- Bootstrap Angular : **prévu** (LOT 01)
+- Pipeline CI/CD : **pas encore implémenté**
+- Configuration de déploiement : **pas encore implémentée**
 
-See [CHANGELOG.md](./CHANGELOG.md) for tracked changes.
+Voir [CHANGELOG.md](./CHANGELOG.md) pour le suivi des changements.
 
-## Planned case studies
+## Études de cas prévues
 
-The following projects are planned to be documented as in-depth case studies:
+Les projets suivants seront documentés sous forme d'études de cas approfondies :
 
 - **MCPrévention**
 - **XNOSWEET / XBASE**
 - **RideTogether**
 - **La Pax Horizon**
 
-Case study structure and editorial rules are defined in [docs/case-studies/README.md](./docs/case-studies/README.md).
+La structure éditoriale et les règles de rédaction sont définies dans [docs/case-studies/README.md](./docs/case-studies/README.md).
 
-## Engineering principles
+## Principes d'ingénierie
 
-- **Clarity over cleverness** — readable code beats clever abstractions.
-- **Accessibility by default** — not an afterthought.
-- **Performance as a feature** — measured and intentional.
-- **Explicit architecture** — layers and responsibilities are documented.
-- **Documented technical decisions** — significant choices are recorded as ADRs.
-- **Maintainability** — small, testable units with clear ownership.
-- **Progressive enhancement** — when relevant to the user experience.
-- **Tests adapted to risk** — coverage where it matters, not for vanity metrics.
-- **No dependency without justification** — every addition must earn its place.
+- **Clarté plutôt qu'ingéniosité** — un code lisible vaut mieux qu'une abstraction maline.
+- **Accessibilité par défaut** — jamais en option ou en fin de projet.
+- **Performance comme feature** — mesurée et intentionnelle.
+- **Architecture explicite** — couches et responsabilités documentées.
+- **Décisions techniques documentées** — les choix significatifs sont consignés en ADR.
+- **Maintenabilité** — petites unités testables, responsabilités claires.
+- **Progressive enhancement** — lorsque pertinent pour l'expérience utilisateur.
+- **Tests adaptés au risque** — couverture là où elle compte, pas pour gonfler des métriques.
+- **Aucune dépendance sans justification** — chaque ajout doit se justifier.
 
-See [CONTRIBUTING.md](./CONTRIBUTING.md) and [ARCHITECTURE.md](./ARCHITECTURE.md) for details.
+Voir [CONTRIBUTING.md](./CONTRIBUTING.md) et [ARCHITECTURE.md](./ARCHITECTURE.md) pour le détail.
 
-## Repository documentation
+## Documentation du dépôt
 
 | Document | Description |
 |----------|-------------|
-| [docs/README.md](./docs/README.md) | Documentation index |
-| [ARCHITECTURE.md](./ARCHITECTURE.md) | Target architecture overview |
-| [docs/decisions/](./docs/decisions/) | Architecture Decision Records (ADRs) |
-| [docs/design-system/](./docs/design-system/) | Design system principles (planned) |
-| [docs/case-studies/](./docs/case-studies/) | Case study editorial guidelines |
-| [CONTRIBUTING.md](./CONTRIBUTING.md) | Contribution guidelines |
+| [docs/README.md](./docs/README.md) | Index de la documentation |
+| [ARCHITECTURE.md](./ARCHITECTURE.md) | Vue d'ensemble de l'architecture cible |
+| [docs/decisions/](./docs/decisions/) | Architecture Decision Records (ADR) |
+| [docs/design-system/](./docs/design-system/) | Principes du design system (prévu) |
+| [docs/case-studies/](./docs/case-studies/) | Guide éditorial des études de cas |
+| [CONTRIBUTING.md](./CONTRIBUTING.md) | Guide de contribution |
 
-## Local development
+## Développement local
 
-**Not available yet.** No application exists at LOT 00. Setup instructions, scripts, and tooling will be added when the Angular bootstrap is introduced in a subsequent lot.
+**Pas encore disponible.** Aucune application n'existe au LOT 00. Les instructions d'installation, les scripts et la toolchain seront ajoutés lors du bootstrap Angular, dans un lot ultérieur.
 
-## Quality strategy
+## Stratégie qualité
 
-The following quality gates are **planned** — none are implemented yet:
+Les contrôles qualité suivants sont **prévus** — aucun n'est implémenté à ce jour :
 
-| Area | Status |
-|------|--------|
-| Lint | Planned |
-| Formatting | Planned |
-| Type checking | Planned |
-| Unit tests | Planned |
-| E2E tests | Planned |
-| Accessibility checks | Planned |
-| Performance audits | Planned |
-| Production build validation | Planned |
+| Domaine | Statut |
+|---------|--------|
+| Lint | Prévu |
+| Formatage | Prévu |
+| Vérification de types | Prévu |
+| Tests unitaires | Prévu |
+| Tests E2E | Prévu |
+| Contrôles d'accessibilité | Prévu |
+| Audits de performance | Prévu |
+| Validation du build de production | Prévu |
 
-Tooling choices and thresholds will be documented via ADR when implemented.
+Les choix d'outillage et les seuils seront documentés via ADR lors de leur mise en place.
 
-## Deployment
+## Déploiement
 
-**Not configured yet.** Deployment strategy and hosting details will be defined and documented in a future lot.
+**Pas encore configuré.** La stratégie de déploiement et l'hébergement seront définis et documentés dans un lot ultérieur.
 
-## License
+## Licence
 
-**Source available — not open source.**
+**Source available — not open source** *(code source consultable, mais pas open source)*.
 
-Copyright (c) 2026 Kevin Radlowski. All rights reserved.
+Copyright (c) 2026 Kevin Radlowski. Tous droits réservés.
 
-The code is publicly viewable for consultation, professional evaluation, and learning. Copying, redistribution, publication, resale, or commercial use without explicit authorization is prohibited.
+Le code est publiquement consultable à des fins de consultation, d'évaluation professionnelle et d'apprentissage. Toute copie, redistribution, publication, revente ou utilisation commerciale sans autorisation explicite est interdite.
 
-See [LICENSE](./LICENSE) for the full terms.
+Voir [LICENSE](./LICENSE) pour les conditions complètes.

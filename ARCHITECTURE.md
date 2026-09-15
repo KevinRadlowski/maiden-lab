@@ -1,84 +1,84 @@
 # Architecture
 
-This document describes the **target architecture** for Maiden Lab and distinguishes it from the **current state** of the repository.
+Ce document décrit l'**architecture cible** de Maiden Lab et la distingue de l'**état actuel** du dépôt.
 
-## Current state
+## État actuel
 
-**LOT 00 — Documentation only.**
+**LOT 00 — Documentation uniquement.**
 
-- No application runtime exists.
-- No framework, build tool, or dependency manager is configured.
-- No source code under `src/`.
-- Architecture decisions about specific technologies (Angular version, SSR strategy, hosting) are deferred to future lots and will be recorded as ADRs.
+- Aucun runtime applicatif n'existe.
+- Aucun framework, outil de build ou gestionnaire de dépendances n'est configuré.
+- Aucun code source sous `src/`.
+- Les décisions d'architecture sur les technologies précises (version Angular, stratégie SSR, hébergement) sont reportées aux lots ultérieurs et seront consignées en ADR.
 
-## Target architecture
+## Architecture cible
 
-Maiden Lab will be a modern Angular application structured for clarity, testability, and long-term maintainability. The Angular version will be chosen at bootstrap time from the latest stable release and documented via ADR — it is intentionally not fixed in this document.
+Maiden Lab sera une application Angular moderne, structurée pour la clarté, la testabilité et la maintenabilité à long terme. La version Angular sera choisie au moment du bootstrap à partir de la dernière version stable disponible et documentée via ADR — elle n'est volontairement pas figée dans ce document.
 
-### Conceptual structure
+### Structure conceptuelle
 
 ```
 src/app/
-    core/           # Singleton services, guards, interceptors, app-wide providers
+    core/           # Services singleton, guards, interceptors, providers globaux
     shared/
-        ui/         # Reusable presentational components
-        layout/     # Shell, header, footer, page wrappers
+        ui/         # Composants présentationnels réutilisables
+        layout/     # Shell, header, footer, wrappers de page
     features/
-        home/       # Landing and primary entry point
-        projects/   # Project listings and case studies
-        journey/    # Professional timeline and experience
-        about/      # Profile, skills, positioning
-        contact/    # Contact and outreach
-    data/           # Data access, models, mappers, content loaders
+        home/       # Page d'accueil et point d'entrée principal
+        projects/   # Liste des projets et études de cas
+        journey/    # Parcours professionnel et expériences
+        about/      # Profil, compétences, positionnement
+        contact/    # Contact et prise de relation
+    data/           # Accès aux données, modèles, mappers, loaders de contenu
 
 src/styles/
-    tokens/         # Design tokens (color, spacing, typography, etc.)
-    typography/     # Font faces, type scale, text utilities
-    utilities/      # Low-level layout and helper classes
-    global/         # Base styles, resets, global overrides
+    tokens/         # Design tokens (couleur, espacement, typographie, etc.)
+    typography/     # Font faces, échelle typographique, utilitaires texte
+    utilities/      # Classes utilitaires de layout et helpers
+    global/         # Styles de base, resets, overrides globaux
 ```
 
-These directories are **not created yet**. They represent the intended layout once the application bootstrap begins.
+Ces répertoires **ne sont pas encore créés**. Ils représentent l'organisation visée une fois le bootstrap de l'application lancé.
 
-### Layer responsibilities
+### Responsabilités des couches
 
-| Layer | Responsibility |
-|-------|----------------|
-| **core** | Application-wide singletons: authentication helpers (if needed), HTTP interceptors, error handling, configuration. Imported once at bootstrap. |
-| **shared/ui** | Stateless, reusable UI building blocks with no feature-specific knowledge. |
-| **shared/layout** | Structural components that frame pages (navigation, footer, responsive shell). |
-| **features/** | Feature modules or route groups owning routes, pages, and feature-specific logic. Each feature is self-contained. |
-| **data** | Content loading, API clients, DTOs, and mapping between external data and view models. Keeps presentation free of fetch logic. |
-| **styles/** | Design system implementation: tokens first, then typography, utilities, and global styles. |
+| Couche | Responsabilité |
+|--------|----------------|
+| **core** | Singletons applicatifs : helpers d'authentification (si nécessaire), interceptors HTTP, gestion d'erreurs, configuration. Importé une seule fois au bootstrap. |
+| **shared/ui** | Blocs UI réutilisables et stateless, sans connaissance métier spécifique à une feature. |
+| **shared/layout** | Composants structurels qui encadrent les pages (navigation, footer, shell responsive). |
+| **features/** | Modules ou groupes de routes possédant routes, pages et logique propre à une feature. Chaque feature est autonome. |
+| **data** | Chargement de contenu, clients API, DTOs et mapping entre données externes et view models. Isole la présentation de la logique de fetch. |
+| **styles/** | Implémentation du design system : tokens d'abord, puis typographie, utilitaires et styles globaux. |
 
-### Architectural principles
+### Principes architecturaux
 
-- **Angular standalone architecture** — standalone components, explicit imports, minimal NgModule usage.
-- **Strict TypeScript** — `strict` mode enabled; explicit types at boundaries.
-- **SSR / prerender** — to be evaluated and formalized in the appropriate lot; decision recorded via ADR.
-- **Lazy loading** — feature routes loaded on demand when bundle size warrants it.
-- **Content / presentation separation** — case study content decoupled from rendering components where practical.
-- **Design tokens** — visual values centralized; no magic numbers scattered in components.
-- **Accessibility** — semantic HTML, keyboard support, ARIA where needed, tested against WCAG targets.
-- **Responsive design** — mobile-first layout with deliberate breakpoints.
-- **SEO** — meta tags, structured data, and rendering strategy aligned with discoverability goals.
-- **Performance** — lazy loading, image optimization, minimal main-thread work, measurable budgets.
-- **Testability** — pure functions and services tested in isolation; component tests for critical UI.
+- **Architecture Angular standalone** — composants standalone, imports explicites, usage minimal des NgModules.
+- **TypeScript strict** — mode `strict` activé ; types explicites aux frontières.
+- **SSR / prerender** — à évaluer et formaliser au lot approprié ; décision consignée en ADR.
+- **Lazy loading** — routes de features chargées à la demande lorsque la taille du bundle le justifie.
+- **Séparation contenu / présentation** — contenu des études de cas découplé des composants de rendu lorsque c'est pertinent.
+- **Design tokens** — valeurs visuelles centralisées ; pas de nombres magiques dispersés dans les composants.
+- **Accessibilité** — HTML sémantique, support clavier, ARIA si nécessaire, vérification selon les cibles WCAG.
+- **Responsive design** — layout mobile-first avec breakpoints intentionnels.
+- **SEO** — meta tags, données structurées et stratégie de rendu alignés sur la découvrabilité.
+- **Performance** — lazy loading, optimisation d'images, travail minimal sur le main thread, budgets mesurables.
+- **Testabilité** — fonctions et services purs testés isolément ; tests de composants pour l'UI critique.
 
-### What is explicitly deferred
+### Sujets explicitement reportés
 
-| Topic | Status |
+| Sujet | Statut |
 |-------|--------|
-| Angular version | Decided at bootstrap (LOT 01+) |
-| SSR vs SSG vs CSR | ADR pending |
-| State management approach | ADR pending if complexity warrants |
-| Hosting and CDN | Documented at deployment lot |
-| Content source (Markdown, CMS, static JSON) | ADR pending |
-| Testing framework configuration | Bootstrap lot |
-| CI pipeline | Future lot |
+| Version Angular | Décision au bootstrap (LOT 01+) |
+| SSR vs SSG vs CSR | ADR à venir |
+| Gestion d'état | ADR à venir si la complexité le justifie |
+| Hébergement et CDN | Documenté au lot déploiement |
+| Source de contenu (Markdown, CMS, JSON statique) | ADR à venir |
+| Configuration du framework de tests | Lot bootstrap |
+| Pipeline CI | Lot ultérieur |
 
-## Related documentation
+## Documentation associée
 
-- [docs/architecture/README.md](./docs/architecture/README.md) — future architecture documentation index
+- [docs/architecture/README.md](./docs/architecture/README.md) — index futur de la documentation d'architecture
 - [docs/decisions/](./docs/decisions/) — Architecture Decision Records
-- [docs/design-system/README.md](./docs/design-system/README.md) — visual and interaction principles
+- [docs/design-system/README.md](./docs/design-system/README.md) — principes visuels et d'interaction

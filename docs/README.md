@@ -1,26 +1,26 @@
 # Documentation
 
-Central index for Maiden Lab repository documentation.
+Index central de la documentation du dépôt Maiden Lab.
 
-## Quick navigation
+## Navigation rapide
 
-| Topic | Location | Description |
-|-------|----------|-------------|
-| Architecture | [../ARCHITECTURE.md](../ARCHITECTURE.md) | Target application architecture and current state |
-| Architecture docs | [architecture/](./architecture/) | Detailed architecture topics (future) |
-| ADRs | [decisions/](./decisions/) | Architecture Decision Records |
-| Design system | [design-system/](./design-system/) | Visual and interaction principles (planned) |
-| Case studies | [case-studies/](./case-studies/) | Editorial template and credibility rules |
-| Contributing | [../CONTRIBUTING.md](../CONTRIBUTING.md) | Development workflow and standards |
-| Changelog | [../CHANGELOG.md](../CHANGELOG.md) | Tracked changes |
+| Sujet | Emplacement | Description |
+|-------|-------------|-------------|
+| Architecture | [../ARCHITECTURE.md](../ARCHITECTURE.md) | Architecture applicative cible et état actuel |
+| Docs d'architecture | [architecture/](./architecture/) | Sujets d'architecture détaillés (à venir) |
+| ADR | [decisions/](./decisions/) | Architecture Decision Records |
+| Design system | [design-system/](./design-system/) | Principes visuels et d'interaction (prévu) |
+| Études de cas | [case-studies/](./case-studies/) | Template éditorial et règles de crédibilité |
+| Contribution | [../CONTRIBUTING.md](../CONTRIBUTING.md) | Workflow de développement et standards |
+| Changelog | [../CHANGELOG.md](../CHANGELOG.md) | Suivi des changements |
 
-## Current scope
+## Périmètre actuel
 
-At LOT 00, this documentation covers governance, target architecture, and editorial guidelines. Application-specific documentation (routing, rendering, deployment, testing) will be added as the codebase is bootstrapped.
+Au LOT 00, cette documentation couvre la gouvernance, l'architecture cible et les lignes éditoriales. La documentation propre à l'application (routing, rendu, déploiement, tests) sera ajoutée au fur et à mesure du bootstrap du code.
 
 ## Conventions
 
-- File and folder names use English.
-- Technical documentation is written in English for international accessibility.
-- Public portfolio content may be in French initially.
-- Significant technical decisions are recorded as ADRs in [decisions/](./decisions/).
+- Les noms de fichiers et de dossiers restent en anglais.
+- La documentation narrative est rédigée en français (voir [ADR-002](./decisions/ADR-002-documentation-language.md)).
+- Le code source, les identifiants et les conventions techniques restent en anglais.
+- Les décisions techniques significatives sont consignées en ADR dans [decisions/](./decisions/).

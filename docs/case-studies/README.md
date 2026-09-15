@@ -1,63 +1,63 @@
-# Case studies
+# Études de cas
 
-Editorial guidelines for Maiden Lab project case studies. No case study content exists yet.
+Guide éditorial pour les études de cas des projets Maiden Lab. Aucun contenu d'étude de cas n'existe encore.
 
-## Purpose
+## Objectif
 
-Case studies are the primary way Maiden Lab demonstrates real project work. Each study should help a reviewer understand context, decisions, trade-offs, and outcomes — not just see screenshots.
+Les études de cas sont le principal moyen par lequel Maiden Lab démontre un travail réel. Chaque étude doit permettre au lecteur de comprendre le contexte, les décisions, les compromis et les résultats — pas seulement de voir des captures d'écran.
 
-## Target structure
+## Structure cible
 
-Each case study should follow this outline:
+Chaque étude de cas suit le plan suivant :
 
-1. **Context** — What is the project? Who is it for? What was the author's role?
-2. **Problem** — What needed to be solved? Why did it matter?
-3. **Scope** — What was in scope and out of scope? Timeline and constraints?
-4. **Product** — Key features and user flows (only what actually exists or existed).
-5. **Architecture** — High-level technical structure; diagrams when helpful.
-6. **Engineering decisions** — Notable choices and why they were made.
-7. **Quality** — Testing, accessibility, performance measures taken (real, not aspirational).
-8. **Challenges** — Difficulties encountered and how they were handled.
-9. **What I learned** — Honest takeaways.
-10. **What's next** — Planned improvements or known limitations.
+1. **Contexte** — Quel est le projet ? Pour qui ? Quel était le rôle de l'auteur ?
+2. **Problème** — Qu'est-ce qui devait être résolu ? Pourquoi était-ce important ?
+3. **Périmètre** — Qu'était in scope et out of scope ? Quelles contraintes de calendrier ?
+4. **Produit** — Fonctionnalités clés et parcours utilisateur (uniquement ce qui existe ou a existé).
+5. **Architecture** — Structure technique de haut niveau ; schémas si utiles.
+6. **Décisions d'ingénierie** — Choix notables et raisons qui les motivent.
+7. **Qualité** — Mesures réelles de tests, accessibilité, performance (pas d'intentions vagues).
+8. **Difficultés rencontrées** — Obstacles et façon dont ils ont été traités.
+9. **Ce que j'en ai appris** — Enseignements honnêtes.
+10. **Prochaines étapes** — Améliorations prévues ou limites connues.
 
-Adapt section depth to the project. Not every section requires equal length.
+Adaptez la profondeur de chaque section au projet. Toutes les sections n'ont pas besoin d'être de longueur égale.
 
-## Planned projects
+## Projets prévus
 
-The following are candidates for full case studies:
+Les candidats suivants feront l'objet d'études de cas complètes :
 
 - MCPrévention
 - XNOSWEET / XBASE
 - RideTogether
 - La Pax Horizon
 
-## Credibility rules
+## Règles de crédibilité
 
-These rules are non-negotiable:
+Ces règles ne sont pas négociables :
 
-- **Never invent metrics** — no fabricated performance numbers, user counts, or business impact.
-- **Never claim a feature exists if it is only planned** — label future work explicitly.
-- **Differentiate personal contribution from team work** — be precise about what you built vs. what the team delivered.
-- **Identify private repositories** — if code cannot be shown, say so and explain what can be shared.
-- **Never publish secrets** — credentials, API keys, internal URLs, or confidential data stay out.
-- **Never expose confidential information** — client names, unreleased features, or proprietary details require explicit clearance.
-- **Use real screenshots only** — no mockups presented as production UI unless labeled as such.
-- **Explain technical trade-offs** — why this approach over alternatives.
-- **Present limits and improvement areas** — credibility comes from honesty, not perfection.
+- **Ne jamais inventer de métriques** — pas de chiffres de performance, d'utilisateurs ou d'impact business fabriqués.
+- **Ne jamais prétendre qu'une feature existe si elle est seulement prévue** — labelliser explicitement le travail futur.
+- **Différencier contribution personnelle et travail d'équipe** — préciser ce que vous avez construit vs. ce que l'équipe a livré.
+- **Identifier les dépôts privés** — si le code ne peut pas être montré, le dire et expliquer ce qui peut l'être.
+- **Ne jamais publier de secrets** — credentials, clés API, URLs internes ou données confidentielles restent hors du dépôt.
+- **Ne jamais exposer d'informations confidentielles** — noms de clients, features non publiées ou détails propriétaires nécessitent une autorisation explicite.
+- **Utiliser uniquement des captures réelles** — pas de maquettes présentées comme UI de production sauf mention explicite.
+- **Expliquer les compromis techniques** — pourquoi cette approche plutôt qu'une alternative.
+- **Présenter les limites et axes d'amélioration** — la crédibilité vient de l'honnêteté, pas de la perfection.
 
-## Status labeling
+## Libellés de statut
 
-Use clear labels throughout:
+Utilisez des libellés clairs tout au long du contenu :
 
-| Label | Meaning |
-|-------|---------|
-| **Shipped** | In production or publicly available |
-| **In progress** | Actively developed |
-| **Planned** | Intended but not started |
-| **Archived** | No longer maintained |
+| Libellé | Signification |
+|---------|---------------|
+| **En production** | Déployé ou accessible publiquement |
+| **En cours** | Développement actif |
+| **Prévu** | Intention confirmée, pas encore démarré |
+| **Archivé** | Plus maintenu |
 
-## Related documentation
+## Documentation associée
 
-- [../decisions/ADR-001-portfolio-product-strategy.md](../decisions/ADR-001-portfolio-product-strategy.md) — product strategy ADR
-- [../design-system/README.md](../design-system/README.md) — visual presentation principles
+- [../decisions/ADR-001-portfolio-product-strategy.md](../decisions/ADR-001-portfolio-product-strategy.md) — ADR stratégie produit
+- [../design-system/README.md](../design-system/README.md) — principes de présentation visuelle

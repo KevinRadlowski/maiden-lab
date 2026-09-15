@@ -1,36 +1,36 @@
-# ADR-000: [Title]
+# ADR-XXX — Titre
 
-## Status
+## Statut
 
-Proposed | Accepted | Superseded | Deprecated
+Proposé | Accepté | Remplacé | Déprécié
 
 ## Date
 
-YYYY-MM-DD
+AAAA-MM-JJ
 
-## Context
+## Contexte
 
-What is the issue or situation that motivates this decision?
-Include relevant constraints, requirements, and background.
+Quel problème ou quelle situation motive cette décision ?
+Inclure les contraintes, exigences et éléments de contexte pertinents.
 
-## Decision
+## Décision
 
-What is the change or choice being made?
-State it clearly and unambiguously.
+Quel changement ou quel choix est acté ?
+L'énoncer clairement et sans ambiguïté.
 
-## Consequences
+## Conséquences
 
-What becomes easier or harder as a result?
+Qu'est-ce qui devient plus simple ou plus difficile ?
 
-- Positive consequences
-- Negative consequences or accepted trade-offs
-- Follow-up actions required
+- Conséquences positives
+- Conséquences négatives ou compromis acceptés
+- Actions de suivi requises
 
-## Alternatives considered
+## Alternatives étudiées
 
-What other options were evaluated?
+Quelles autres options ont été évaluées ?
 
-For each alternative:
+Pour chaque alternative :
 
-- Brief description
-- Reason for acceptance or rejection
+- Description succincte
+- Raison de l'acceptation ou du rejet

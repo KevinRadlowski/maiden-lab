@@ -1,77 +1,77 @@
 # Design system
 
-Principles and direction for the Maiden Lab visual identity. **No CSS, tokens, or components exist yet.** This document defines the target approach only.
+Principes et direction pour l'identité visuelle de Maiden Lab. **Aucun CSS, token ni composant n'existe encore.** Ce document définit uniquement l'approche cible.
 
-## Brand direction
+## Direction de marque
 
 **MAIDEN / LAB**
 
-Positioning: personal digital studio / engineering portfolio.
+Positionnement : studio numérique personnel / portfolio d'ingénierie.
 
-The visual language should feel editorial, premium, and human — not like a template assembled from common developer-portfolio tropes.
+Le langage visuel doit être éditorial, premium et humain — pas un template assemblé à partir des clichés habituels des portfolios développeurs.
 
-## Explicitly avoided clichés
+## Clichés explicitement évités
 
-Do not default to patterns that signal "generic dev portfolio":
+Ne pas retomber dans les patterns qui signalent un « dev portfolio générique » :
 
-- omnipresent purple gradients
-- systematic glassmorphism
-- decorative blobs with no purpose
-- gratuitous motion
-- fake terminal interfaces
-- logo walls with no narrative
-- generic copy such as "I build digital experiences."
+- dégradés violets omniprésents ;
+- glassmorphism systématique ;
+- blobs décoratifs sans fonction ;
+- animations gratuites ;
+- fausses interfaces terminal ;
+- murs de logos sans narration ;
+- copy générique du type « I build digital experiences ».
 
-Every visual choice should serve readability, hierarchy, or brand recognition.
+Chaque choix visuel doit servir la lisibilité, la hiérarchie ou la reconnaissance de marque.
 
-## Design principles
+## Principes de design
 
-- **Editorial** — content-led layout with strong typographic hierarchy.
-- **Premium** — restrained palette, generous spacing, considered details.
-- **Restrained** — fewer elements, each with clear purpose.
-- **Human** — approachable tone in copy; no corporate boilerplate.
-- **Typographic precision** — deliberate type scale, line height, and measure.
-- **Generous whitespace** — let content breathe.
-- **Controlled grid** — consistent rhythm with room for intentional asymmetry.
-- **Discrete graphic details** — accent motifs used sparingly.
+- **Éditorial** — mise en page guidée par le contenu, hiérarchie typographique forte.
+- **Premium** — palette retenue, espacements généreux, détails travaillés.
+- **Sobre** — moins d'éléments, chacun avec un rôle clair.
+- **Humain** — ton accessible dans les textes ; pas de boilerplate corporate.
+- **Précision typographique** — échelle de tailles, interlignage et césure intentionnels.
+- **Espaces généreux** — laisser respirer le contenu.
+- **Grille maîtrisée** — rythme cohérent avec place pour une asymétrie intentionnelle.
+- **Détails graphiques discrets** — motifs d'accent utilisés avec parcimonie.
 
-## Planned identity elements
+## Éléments d'identité prévus
 
-| Element | Direction |
+| Élément | Direction |
 |---------|-----------|
-| Background | Warm ivory / off-white base |
-| Text | Graphite tones for body and headings |
-| Accent | Indigo/violet used sparingly for emphasis and interaction |
-| Motif | Slash `/` as a potential graphic element (MAIDEN/LAB) |
-| Dark theme | Designed separately — not a simple color inversion of light mode |
+| Fond | Base ivoire / blanc chaud |
+| Texte | Tons graphite pour corps et titres |
+| Accent | Indigo/violet utilisé avec parcimonie pour l'emphase et l'interaction |
+| Motif | Slash `/` comme élément graphique potentiel (MAIDEN/LAB) |
+| Dark theme | Conçu séparément — pas une simple inversion du mode clair |
 
-Final values will be defined as design tokens during the UI implementation lot.
+Les valeurs finales seront définies sous forme de design tokens lors du lot d'implémentation UI.
 
-## Future token categories
+## Catégories de tokens futures
 
-Tokens will be organized into the following categories. **No values are defined in this lot.**
+Les tokens seront organisés selon les catégories suivantes. **Aucune valeur n'est définie dans ce lot.**
 
-| Category | Purpose |
-|----------|---------|
-| `color` | Background, text, accent, semantic states |
-| `typography` | Font families, sizes, weights, line heights |
-| `spacing` | Margin, padding, gap scale |
-| `radius` | Border radius scale |
-| `shadow` | Elevation and depth |
-| `motion` | Duration, easing, reduced-motion alternatives |
-| `breakpoints` | Responsive layout thresholds |
-| `z-index` | Layering scale for overlays, navigation, modals |
+| Catégorie | Rôle |
+|-----------|------|
+| `color` | Fond, texte, accent, états sémantiques |
+| `typography` | Familles, tailles, graisses, interlignages |
+| `spacing` | Échelle de marges, paddings et gaps |
+| `radius` | Échelle de border-radius |
+| `shadow` | Élévation et profondeur |
+| `motion` | Durées, easing, alternatives reduced-motion |
+| `breakpoints` | Seuils de layout responsive |
+| `z-index` | Échelle de superposition pour overlays, navigation, modales |
 
-Implementation will live under `src/styles/tokens/` once the application exists. See [../architecture/README.md](../architecture/README.md) for related architecture topics.
+L'implémentation vivra sous `src/styles/tokens/` une fois l'application existante. Voir [../architecture/README.md](../architecture/README.md) pour les sujets d'architecture associés.
 
-## Accessibility and motion
+## Accessibilité et motion
 
-- Respect `prefers-reduced-motion`.
-- Maintain sufficient color contrast in both light and dark themes.
-- Focus states must be visible and consistent.
-- Motion supports understanding; it does not decorate idle screens.
+- Respecter `prefers-reduced-motion`.
+- Maintenir un contraste suffisant en mode clair et en dark theme.
+- Les états de focus doivent être visibles et cohérents.
+- Le mouvement aide à la compréhension ; il ne décore pas des écrans au repos.
 
-## Related documentation
+## Documentation associée
 
-- [ARCHITECTURE.md](../../ARCHITECTURE.md) — styles directory structure
-- [../case-studies/README.md](../case-studies/README.md) — case study presentation guidelines
+- [ARCHITECTURE.md](../../ARCHITECTURE.md) — structure du répertoire `styles/`
+- [../case-studies/README.md](../case-studies/README.md) — principes de présentation des études de cas

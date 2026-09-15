@@ -1,20 +1,28 @@
 Copyright (c) 2026 Kevin Radlowski
 
-All rights reserved.
+Tous droits réservés.
 
-This repository and its contents are publicly viewable for consultation,
-professional evaluation, and learning purposes only.
+Ce dépôt et son contenu sont publiquement consultables à des fins de :
 
-You may not copy, redistribute, publish, sublicense, sell, or otherwise use
-this material for commercial purposes without explicit written permission
-from the copyright holder.
+- consultation ;
+- évaluation professionnelle ;
+- apprentissage.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Sans autorisation écrite explicite du titulaire des droits, il est notamment interdit de :
 
-This is not an open source license. Source available — not open source.
+- copier ;
+- redistribuer ;
+- republier ;
+- revendre ;
+- utiliser ce matériel à des fins commerciales.
+
+LE LOGICIEL EST FOURNI « EN L'ÉTAT », SANS GARANTIE D'AUCUNE SORTE, EXPRESSE OU
+IMPLICITE, Y COMPRIS, SANS S'Y LIMITER, LES GARANTIES DE QUALITÉ MARCHANDE,
+D'ADÉQUATION À UN USAGE PARTICULIER ET D'ABSENCE DE CONTREFAÇON. EN AUCUN CAS
+LES AUTEURS OU TITULAIRES DES DROITS NE POURRONT ÊTRE TENUS RESPONSABLES DE
+TOUT DOMMAGE, RÉCLAMATION OU AUTRE RESPONSABILITÉ, QUE CE SOIT DANS LE CADRE
+D'UN CONTRAT, D'UN DÉLIT OU AUTRE, DÉCOULANT DE, LIÉ À OU RÉSULTANT DE
+L'UTILISATION DU LOGICIEL OU DE TOUTE AUTRE MANIPULATION DU LOGICIEL.
+
+Il ne s'agit pas d'une licence open source. Source available — not open source
+(code source consultable, mais droits de réutilisation non accordés).

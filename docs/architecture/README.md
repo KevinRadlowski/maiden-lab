@@ -1,30 +1,30 @@
-# Architecture documentation
+# Documentation d'architecture
 
-Index for detailed architecture documentation. Topics listed below will be written as the application is bootstrapped and decisions are validated.
+Index de la documentation d'architecture détaillée. Les sujets listés ci-dessous seront rédigés au fur et à mesure du bootstrap de l'application et de la validation des décisions.
 
-## Planned topics
+## Sujets prévus
 
-| Topic | Description | Status |
+| Sujet | Description | Statut |
 |-------|-------------|--------|
-| Application architecture | Layering, module boundaries, dependency flow | Planned |
-| Routing | Route structure, lazy loading, guards | Planned |
-| Rendering strategy | CSR, SSR, SSG, or hybrid approach | Planned |
-| Content architecture | How case study and page content is stored and loaded | Planned |
-| SEO | Meta tags, structured data, sitemap | Planned |
-| Accessibility | WCAG targets, testing approach, component patterns | Planned |
-| Performance | Budgets, lazy loading, asset strategy | Planned |
-| Testing | Unit, integration, E2E strategy | Planned |
-| Deployment | Hosting, CDN, environment configuration | Planned |
-| Security | Headers, CSP, dependency hygiene | Planned |
-| Observability | Logging, error tracking, analytics (if any) | Planned |
+| Architecture applicative | Couches, frontières de modules, flux de dépendances | Prévu |
+| Routing | Structure des routes, lazy loading, guards | Prévu |
+| Stratégie de rendu | CSR, SSR, SSG ou approche hybride | Prévu |
+| Architecture du contenu | Stockage et chargement du contenu des pages et études de cas | Prévu |
+| SEO | Meta tags, données structurées, sitemap | Prévu |
+| Accessibilité | Cibles WCAG, approche de test, patterns de composants | Prévu |
+| Performance | Budgets, lazy loading, stratégie d'assets | Prévu |
+| Tests | Stratégie unitaire, intégration, E2E | Prévu |
+| Déploiement | Hébergement, CDN, configuration d'environnement | Prévu |
+| Sécurité | Headers, CSP, hygiène des dépendances | Prévu |
+| Observabilité | Logging, suivi d'erreurs, analytics (le cas échéant) | Prévu |
 
-## Related documents
+## Documents associés
 
-- [ARCHITECTURE.md](../../ARCHITECTURE.md) — high-level target architecture and current state
+- [ARCHITECTURE.md](../../ARCHITECTURE.md) — architecture cible et état actuel, vue d'ensemble
 - [../decisions/](../decisions/) — Architecture Decision Records
 
 ## Conventions
 
-- Each topic gets its own markdown file in this directory when implemented.
-- Significant choices within a topic are cross-referenced from the relevant ADR.
-- Documents distinguish **current implementation** from **planned** work.
+- Chaque sujet obtiendra son propre fichier markdown dans ce répertoire lors de son implémentation.
+- Les choix significatifs au sein d'un sujet sont renvoyés vers l'ADR correspondant.
+- Les documents distinguent **l'implémentation actuelle** du travail **prévu**.

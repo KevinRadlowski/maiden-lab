@@ -1,13 +1,18 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+Toutes les modifications notables de ce projet seront consignées dans ce fichier.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) once releases begin.
+Le format s'inspire de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), et le projet adoptera [Semantic Versioning](https://semver.org/spec/v2.0.0.html) dès que des releases seront publiées.
 
-No version has been released yet. Entries below track work in progress.
+Aucune version n'a encore été publiée. Les entrées ci-dessous suivent le travail en cours.
 
 ## [Unreleased]
 
 ### Added
 
-- Initial repository governance and documentation.
+- Gouvernance initiale du dépôt et documentation de fondation.
+- ADR-002 — langue canonique de la documentation.
+
+### Changed
+
+- Francisation de l'ensemble de la documentation narrative du dépôt.

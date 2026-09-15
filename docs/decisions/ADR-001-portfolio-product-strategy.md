@@ -1,71 +1,71 @@
-# ADR-001: Portfolio product strategy
+# ADR-001 — Stratégie produit du portfolio
 
-## Status
+## Statut
 
-Accepted
+Accepté
 
 ## Date
 
 2026-09-15
 
-## Context
+## Contexte
 
-Maiden Lab is Kevin Radlowski's public professional portfolio. It will be reviewed by recruiters, hiring managers, and technical peers. A generic developer portfolio — thin on substance, heavy on visual clichés, or misrepresenting scope — undermines credibility.
+Maiden Lab est le portfolio professionnel public de Kevin Radlowski. Il sera consulté par des recruteurs, des hiring managers et des pairs techniques. Un portfolio développeur générique — peu substantiel, chargé de clichés visuels ou surévaluant le périmètre réel — nuit à la crédibilité.
 
-The repository is public on GitHub and linked from a professional domain. It must therefore reflect intentional product and engineering practices, not ad-hoc page assembly.
+Le dépôt est public sur GitHub et lié à un domaine professionnel. Il doit refléter des pratiques produit et d'ingénierie intentionnelles, et non un assemblage de pages ad hoc.
 
-## Decision
+## Décision
 
-Maiden Lab is treated as a **professional software product** and as a **public demonstration of its author's engineering practices**.
+Maiden Lab est traité comme un **produit logiciel professionnel** et comme une **démonstration publique des pratiques d'ingénierie de son auteur**.
 
-This means:
+Cela implique :
 
-- The repository is public and maintained with the same care as a client deliverable.
-- Architecture, decisions, and trade-offs are documented explicitly.
-- Case studies are in-depth and honest, not marketing summaries.
-- Quality is measurable: accessibility, performance, and maintainability are goals, not slogans.
-- Documentation is written for reviewers who may not have local context.
-- Dependencies are added only with clear justification.
-- Private aspects of other projects are acknowledged transparently.
-- No false demonstrations, metrics, features, or contributions are presented.
+- Un dépôt public maintenu avec le même soin qu'une livraison client.
+- Une architecture, des décisions et des compromis documentés explicitement.
+- Des études de cas approfondies et honnêtes, pas des résumés marketing.
+- Une qualité mesurable : accessibilité, performance et maintenabilité sont des objectifs, pas des slogans.
+- Une documentation rédigée pour des relecteurs sans contexte local.
+- Des dépendances ajoutées uniquement avec justification claire.
+- Une transparence sur les aspects privés des autres projets.
+- Aucune fausse démonstration, métrique, feature ou contribution.
 
-## Consequences
+## Conséquences
 
-### Positive
+### Positives
 
-- Reviewers can assess both output and process.
-- Documentation provides context that code alone cannot.
-- Editorial and technical standards reduce rework later.
-- The portfolio itself becomes a credible case study.
+- Les relecteurs peuvent évaluer à la fois le résultat et la démarche.
+- La documentation apporte un contexte que le code seul ne transmet pas.
+- Les standards éditoriaux et techniques limitent la dette documentaire ultérieure.
+- Le portfolio devient lui-même une étude de cas crédible.
 
-### Negative / trade-offs
+### Négatives / compromis
 
-- Higher upfront investment in documentation before visible UI progress.
-- Slower initial velocity compared to a quick static site.
-- Case studies require ongoing maintenance as projects evolve.
+- Investissement documentaire initial plus élevé avant une progression UI visible.
+- Vélocité initiale plus lente qu'un site statique rapide.
+- Les études de cas demandent une maintenance au fil de l'évolution des projets.
 
-### Follow-up
+### Suivi
 
-- Bootstrap the Angular application in a subsequent lot.
-- Record technology-specific decisions (Angular version, rendering strategy, hosting) as separate ADRs when validated.
-- Apply case study editorial rules defined in [../case-studies/README.md](../case-studies/README.md).
+- Bootstrap de l'application Angular dans un lot ultérieur.
+- Consignation des décisions technologiques (version Angular, stratégie de rendu, hébergement) en ADR distincts une fois validées.
+- Application des règles éditoriales définies dans [../case-studies/README.md](../case-studies/README.md).
 
-## Alternatives considered
+## Alternatives étudiées
 
-### Minimal static CV site
+### Site CV statique minimal
 
-A single-page HTML/CSS site would ship faster.
+Un site HTML/CSS monopage serait livré plus vite.
 
-**Rejected:** Insufficient depth to demonstrate Angular/Spring expertise, architecture thinking, or engineering discipline expected at the target level.
+**Rejeté :** profondeur insuffisante pour démontrer l'expertise Angular/Spring, la réflexion architecturale et la discipline d'ingénierie attendues au niveau visé.
 
-### Private repository with deployed site only
+### Dépôt privé avec site déployé uniquement
 
-Keep code private; show only the live URL.
+Garder le code privé ; ne montrer que l'URL en production.
 
-**Rejected:** GitHub visibility is an explicit goal for technical reviewers. A public, well-structured repository adds credibility.
+**Rejeté :** la visibilité GitHub est un objectif explicite pour les relecteurs techniques. Un dépôt public bien structuré renforce la crédibilité.
 
-### Open source license
+### Licence open source
 
-Use MIT or similar to maximize reuse.
+Utiliser MIT ou équivalent pour maximiser la réutilisation.
 
-**Rejected for now:** The author wishes to retain rights over the portfolio code and design. The repository is source-available for consultation and evaluation, not freely reusable. See [LICENSE](../../LICENSE).
+**Rejeté pour l'instant :** l'auteur souhaite conserver les droits sur le code et le design du portfolio. Le dépôt est source available pour consultation et évaluation, pas librement réutilisable. Voir [LICENSE](../../LICENSE).
