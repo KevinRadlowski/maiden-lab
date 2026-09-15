@@ -4,19 +4,19 @@ Index de la documentation d'architecture détaillée. Les sujets listés ci-dess
 
 ## Sujets prévus
 
-| Sujet | Description | Statut |
-|-------|-------------|--------|
-| Architecture applicative | Couches, frontières de modules, flux de dépendances | Prévu |
-| Routing | Structure des routes, lazy loading, guards | Prévu |
-| Stratégie de rendu | CSR, SSR, SSG ou approche hybride | Prévu |
-| Architecture du contenu | Stockage et chargement du contenu des pages et études de cas | Prévu |
-| SEO | Meta tags, données structurées, sitemap | Prévu |
-| Accessibilité | Cibles WCAG, approche de test, patterns de composants | Prévu |
-| Performance | Budgets, lazy loading, stratégie d'assets | Prévu |
-| Tests | Stratégie unitaire, intégration, E2E | Prévu |
-| Déploiement | Hébergement, CDN, configuration d'environnement | Prévu |
-| Sécurité | Headers, CSP, hygiène des dépendances | Prévu |
-| Observabilité | Logging, suivi d'erreurs, analytics (le cas échéant) | Prévu |
+| Sujet                    | Description                                                  | Statut |
+| ------------------------ | ------------------------------------------------------------ | ------ |
+| Architecture applicative | Couches, frontières de modules, flux de dépendances          | Prévu  |
+| Routing                  | Structure des routes, lazy loading, guards                   | Prévu  |
+| Stratégie de rendu       | CSR, SSR, SSG ou approche hybride                            | Prévu  |
+| Architecture du contenu  | Stockage et chargement du contenu des pages et études de cas | Prévu  |
+| SEO                      | Meta tags, données structurées, sitemap                      | Prévu  |
+| Accessibilité            | Cibles WCAG, approche de test, patterns de composants        | Prévu  |
+| Performance              | Budgets, lazy loading, stratégie d'assets                    | Prévu  |
+| Tests                    | Stratégie unitaire, intégration, E2E                         | Prévu  |
+| Déploiement              | Hébergement, CDN, configuration d'environnement              | Prévu  |
+| Sécurité                 | Headers, CSP, hygiène des dépendances                        | Prévu  |
+| Observabilité            | Logging, suivi d'erreurs, analytics (le cas échéant)         | Prévu  |
 
 ## Documents associés
 

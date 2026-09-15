@@ -23,12 +23,12 @@ Ce dépôt vise à :
 
 ## État actuel
 
-**LOT 00 — Fondations du dépôt.** À ce stade, le repository contient uniquement la documentation de gouvernance et les règles d'ingénierie.
+**LOT 01 — Bootstrap Angular.** Application Angular fonctionnelle avec routing, prerender, tests, lint et formatage. Pages placeholders uniquement — pas de design final ni de contenu d'études de cas.
 
-- Runtime applicatif : **pas encore implémenté**
-- Bootstrap Angular : **prévu** (LOT 01)
+- Application Angular : **implémentée** (v22.1.6)
+- Design system visuel : **prévu** (LOT 02)
 - Pipeline CI/CD : **pas encore implémenté**
-- Configuration de déploiement : **pas encore implémentée**
+- Déploiement : **pas encore configuré**
 
 Voir [CHANGELOG.md](./CHANGELOG.md) pour le suivi des changements.
 
@@ -41,7 +41,7 @@ Les projets suivants seront documentés sous forme d'études de cas approfondies
 - **RideTogether**
 - **La Pax Horizon**
 
-La structure éditoriale et les règles de rédaction sont définies dans [docs/case-studies/README.md](./docs/case-studies/README.md).
+Des routes placeholder existent déjà ; le contenu réel viendra dans des lots ultérieurs. Voir [docs/case-studies/README.md](./docs/case-studies/README.md).
 
 ## Principes d'ingénierie
 
@@ -59,43 +59,61 @@ Voir [CONTRIBUTING.md](./CONTRIBUTING.md) et [ARCHITECTURE.md](./ARCHITECTURE.md
 
 ## Documentation du dépôt
 
-| Document | Description |
-|----------|-------------|
-| [docs/README.md](./docs/README.md) | Index de la documentation |
-| [ARCHITECTURE.md](./ARCHITECTURE.md) | Vue d'ensemble de l'architecture cible |
-| [docs/decisions/](./docs/decisions/) | Architecture Decision Records (ADR) |
-| [docs/design-system/](./docs/design-system/) | Principes du design system (prévu) |
-| [docs/case-studies/](./docs/case-studies/) | Guide éditorial des études de cas |
-| [CONTRIBUTING.md](./CONTRIBUTING.md) | Guide de contribution |
+| Document                                     | Description                         |
+| -------------------------------------------- | ----------------------------------- |
+| [docs/README.md](./docs/README.md)           | Index de la documentation           |
+| [ARCHITECTURE.md](./ARCHITECTURE.md)         | Architecture applicative            |
+| [docs/decisions/](./docs/decisions/)         | Architecture Decision Records (ADR) |
+| [docs/design-system/](./docs/design-system/) | Principes du design system (prévu)  |
+| [docs/case-studies/](./docs/case-studies/)   | Guide éditorial des études de cas   |
+| [CONTRIBUTING.md](./CONTRIBUTING.md)         | Guide de contribution               |
 
 ## Développement local
 
-**Pas encore disponible.** Aucune application n'existe au LOT 00. Les instructions d'installation, les scripts et la toolchain seront ajoutés lors du bootstrap Angular, dans un lot ultérieur.
+**Prérequis :** Node.js `^22.22.3`, `^24.15.0` ou `>=26.0.0` (compatible Angular 22).
+
+```bash
+npm install
+npm start
+```
+
+L'application est disponible sur [http://localhost:4200](http://localhost:4200).
+
+### Scripts utiles
+
+| Commande         | Description                                       |
+| ---------------- | ------------------------------------------------- |
+| `npm start`      | Serveur de développement                          |
+| `npm run build`  | Build production avec prerender                   |
+| `npm run check`  | Garde-fou local : format, lint, tests CI, build   |
+| `npm run e2e`    | Tests E2E Playwright (navigateur Chromium requis) |
+| `npm test`       | Tests unitaires Vitest (mode watch en TTY)        |
+| `npm run lint`   | ESLint (TypeScript + templates Angular)           |
+| `npm run format` | Formatage Prettier                                |
+
+> **Playwright :** si les navigateurs ne sont pas installés, exécuter `npx playwright install chromium` après `npm install`.
 
 ## Stratégie qualité
 
-Les contrôles qualité suivants sont **prévus** — aucun n'est implémenté à ce jour :
-
-| Domaine | Statut |
-|---------|--------|
-| Lint | Prévu |
-| Formatage | Prévu |
-| Vérification de types | Prévu |
-| Tests unitaires | Prévu |
-| Tests E2E | Prévu |
-| Contrôles d'accessibilité | Prévu |
-| Audits de performance | Prévu |
-| Validation du build de production | Prévu |
-
-Les choix d'outillage et les seuils seront documentés via ADR lors de leur mise en place.
+| Domaine                           | Statut     |
+| --------------------------------- | ---------- |
+| Lint (ESLint + angular-eslint)    | Implémenté |
+| Formatage (Prettier)              | Implémenté |
+| Vérification de types (TS strict) | Implémenté |
+| Tests unitaires (Vitest)          | Implémenté |
+| Tests E2E (Playwright)            | Implémenté |
+| Build production + prerender      | Implémenté |
+| Contrôles d'accessibilité avancés | Prévu      |
+| Audits de performance             | Prévu      |
+| CI/CD                             | Prévu      |
 
 ## Déploiement
 
-**Pas encore configuré.** La stratégie de déploiement et l'hébergement seront définis et documentés dans un lot ultérieur.
+**Pas encore configuré.** Le build produit des artefacts statiques prêts pour un hébergement statique ; la configuration DNS, CDN et règles HTTP 404 sera traitée dans un lot dédié. Voir [ADR-004](./docs/decisions/ADR-004-rendering-strategy.md).
 
 ## Licence
 
-**Source available — not open source** *(code source consultable, mais pas open source)*.
+**Source available — not open source** _(code source consultable, mais pas open source)_.
 
 Copyright (c) 2026 Kevin Radlowski. Tous droits réservés.
 

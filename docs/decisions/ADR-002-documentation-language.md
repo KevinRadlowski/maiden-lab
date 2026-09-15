@@ -1,8 +1,8 @@
-﻿# ADR-002 â€” Langue de la documentation
+# ADR-002 — Langue de la documentation
 
 ## Statut
 
-AcceptÃ©
+Accepté
 
 ## Date
 
@@ -10,73 +10,72 @@ AcceptÃ©
 
 ## Contexte
 
-Maiden Lab est un projet francophone : le portfolio s'adresse prioritairement Ã  un public professionnel francophone, et l'identitÃ© Ã©ditoriale du projet est ancrÃ©e dans cette langue.
+Maiden Lab est un projet francophone : le portfolio s'adresse prioritairement à un public professionnel francophone, et l'identité éditoriale du projet est ancrée dans cette langue.
 
-Lors du LOT 00, la documentation avait Ã©tÃ© rÃ©digÃ©e en anglais par dÃ©faut, ce qui crÃ©ait une incohÃ©rence avec le positionnement du produit et le contenu public prÃ©vu sur [maidenlab.fr](https://maidenlab.fr).
+Lors du LOT 00, la documentation avait été rédigée en anglais par défaut, ce qui créait une incohérence avec le positionnement du produit et le contenu public prévu sur [maidenlab.fr](https://maidenlab.fr).
 
-Par ailleurs, le code source et les conventions techniques de l'Ã©cosÃ¨me Angular/TypeScript restent naturellement en anglais. Une rÃ¨gle claire est nÃ©cessaire pour Ã©viter que de futurs contributeurs â€” humains ou agents â€” ne basculent Ã  nouveau toute la documentation en anglais par habitude.
+Par ailleurs, le code source et les conventions techniques de l'écosystème Angular/TypeScript restent naturellement en anglais. Une règle claire est nécessaire pour éviter que de futurs contributeurs — humains ou agents — ne basculent à nouveau toute la documentation en anglais par habitude.
 
-## DÃ©cision
+## Décision
 
-**Le franÃ§ais est la langue canonique de :**
+**Le français est la langue canonique de :**
 
-- la documentation du dÃ©pÃ´t ;
+- la documentation du dépôt ;
 - l'interface utilisateur du portfolio ;
-- le contenu Ã©ditorial (pages, Ã©tudes de cas, textes publics) ;
+- le contenu éditorial (pages, études de cas, textes publics) ;
 - les explications d'architecture ;
-- les commentaires explicatifs dans le code lorsqu'ils apportent du contexte mÃ©tier ou des compromis non Ã©vidents ;
-- la documentation des tests lorsqu'un texte libre est nÃ©cessaire ;
-- les messages d'erreur mÃ©tier destinÃ©s Ã  l'utilisateur final.
+- les commentaires explicatifs dans le code lorsqu'ils apportent du contexte métier ou des compromis non évidents ;
+- la documentation des tests lorsqu'un texte libre est nécessaire ;
+- les messages d'erreur métier destinés à l'utilisateur final.
 
-**L'anglais reste utilisÃ© pour :**
+**L'anglais reste utilisé pour :**
 
-- le code source (implÃ©mentation) ;
+- le code source (implémentation) ;
 - les identifiants (variables, fonctions, classes, interfaces, types TypeScript) ;
 - les noms de fichiers et dossiers applicatifs lorsque la convention Angular le justifie ;
-- les noms d'API, routes techniques et propriÃ©tÃ©s de configuration ;
-- les clÃ©s JSON et noms de packages ;
+- les noms d'API, routes techniques et propriétés de configuration ;
+- les clés JSON et noms de packages ;
 - les commandes CLI ;
-- Conventional Commits et prÃ©fixes de branches Git (`feat/`, `fix/`, `docs/`, etc.) ;
-- la terminologie technique lorsqu'une traduction serait artificielle ou peu usitÃ©e en franÃ§ais (ex. *design tokens*, *pull request*, *runtime*, *build*).
+- Conventional Commits et préfixes de branches Git (`feat/`, `fix/`, `docs/`, etc.) ;
+- la terminologie technique lorsqu'une traduction serait artificielle ou peu usitée en français (ex. _design tokens_, _pull request_, _runtime_, _build_).
 
-## ConsÃ©quences
+## Conséquences
 
 ### Positives
 
-- CohÃ©rence entre documentation, contenu public et identitÃ© du projet.
+- Cohérence entre documentation, contenu public et identité du projet.
 - Documentation plus naturelle pour l'auteur et le public cible francophone.
-- Base de code qui reste conventionnelle et lisible pour tout dÃ©veloppeur habituÃ© Ã  l'Ã©cosystÃ¨me Angular/TypeScript.
-- RÃ¨gle explicite rÃ©duisant les dÃ©rives linguistiques futures.
+- Base de code qui reste conventionnelle et lisible pour tout développeur habitué à l'écosystème Angular/TypeScript.
+- Règle explicite réduisant les dérives linguistiques futures.
 
-### NÃ©gatives / compromis
+### Négatives / compromis
 
-- AccessibilitÃ© internationale de la documentation rÃ©duite par rapport Ã  un dÃ©pÃ´t entiÃ¨rement en anglais.
-- NÃ©cessitÃ© de discipline pour ne pas mÃ©langer franÃ§ais narratif et anglais technique de faÃ§on incohÃ©rente.
-- Les titres de sections Keep a Changelog (`[Unreleased]`, `Added`) peuvent rester en anglais pour compatibilitÃ© outillage.
+- Accessibilité internationale de la documentation réduite par rapport à un dépôt entièrement en anglais.
+- Nécessité de discipline pour ne pas mélanger français narratif et anglais technique de façon incohérente.
+- Les titres de sections Keep a Changelog (`[Unreleased]`, `Added`) peuvent rester en anglais pour compatibilité outillage.
 
 ### Suivi
 
-- Toute nouvelle documentation narrative est rÃ©digÃ©e en franÃ§ais par dÃ©faut.
-- Une documentation en anglais n'est introduite que si une nÃ©cessitÃ© technique ou externe explicite le justifie, et doit alors Ãªtre consignÃ©e ou rÃ©fÃ©rencÃ©e dans un ADR si elle devient permanente.
-- Les ADR existants et futurs suivent le template francisÃ© ([ADR-000-template.md](./ADR-000-template.md)).
+- Toute nouvelle documentation narrative est rédigée en français par défaut.
+- Une documentation en anglais n'est introduite que si une nécessité technique ou externe explicite le justifie, et doit alors être consignée ou référencée dans un ADR si elle devient permanente.
+- Les ADR existants et futurs suivent le template francisé ([ADR-000-template.md](./ADR-000-template.md)).
 
-## Alternatives Ã©tudiÃ©es
+## Alternatives étudiées
 
-### Documentation entiÃ¨rement en anglais
+### Documentation entièrement en anglais
 
-Conserver l'anglais pour maximiser l'audience internationale du dÃ©pÃ´t GitHub.
+Conserver l'anglais pour maximiser l'audience internationale du dépôt GitHub.
 
-**RejetÃ© :** incohÃ©rent avec le positionnement francophone du produit et le contenu public prÃ©vu ; la documentation paraÃ®t moins authentique pour le public cible.
+**Rejeté :** incohérent avec le positionnement francophone du produit et le contenu public prévu ; la documentation paraît moins authentique pour le public cible.
 
-### Bilinguisme systÃ©matique (FR + EN)
+### Bilinguisme systématique (FR + EN)
 
 Maintenir chaque document en deux versions.
 
-**RejetÃ© :** coÃ»t de maintenance double disproportionnÃ© pour un portfolio personnel ; risque de divergence entre versions.
+**Rejeté :** coût de maintenance double disproportionné pour un portfolio personnel ; risque de divergence entre versions.
 
-### Traduction intÃ©grale du code et des identifiants en franÃ§ais
+### Traduction intégrale du code et des identifiants en français
 
 Franciser noms de variables, routes et dossiers applicatifs.
 
-**RejetÃ© :** contraire aux conventions de l'industrie et de l'Ã©cosystÃ¨me Angular ; nuit Ã  la lisibilitÃ© pour les relecteurs techniques.
-
+**Rejeté :** contraire aux conventions de l'industrie et de l'écosystème Angular ; nuit à la lisibilité pour les relecteurs techniques.

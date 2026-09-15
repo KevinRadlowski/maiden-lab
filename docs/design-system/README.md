@@ -37,13 +37,13 @@ Chaque choix visuel doit servir la lisibilité, la hiérarchie ou la reconnaissa
 
 ## Éléments d'identité prévus
 
-| Élément | Direction |
-|---------|-----------|
-| Fond | Base ivoire / blanc chaud |
-| Texte | Tons graphite pour corps et titres |
-| Accent | Indigo/violet utilisé avec parcimonie pour l'emphase et l'interaction |
-| Motif | Slash `/` comme élément graphique potentiel (MAIDEN/LAB) |
-| Dark theme | Conçu séparément — pas une simple inversion du mode clair |
+| Élément    | Direction                                                             |
+| ---------- | --------------------------------------------------------------------- |
+| Fond       | Base ivoire / blanc chaud                                             |
+| Texte      | Tons graphite pour corps et titres                                    |
+| Accent     | Indigo/violet utilisé avec parcimonie pour l'emphase et l'interaction |
+| Motif      | Slash `/` comme élément graphique potentiel (MAIDEN/LAB)              |
+| Dark theme | Conçu séparément — pas une simple inversion du mode clair             |
 
 Les valeurs finales seront définies sous forme de design tokens lors du lot d'implémentation UI.
 
@@ -51,16 +51,16 @@ Les valeurs finales seront définies sous forme de design tokens lors du lot d'i
 
 Les tokens seront organisés selon les catégories suivantes. **Aucune valeur n'est définie dans ce lot.**
 
-| Catégorie | Rôle |
-|-----------|------|
-| `color` | Fond, texte, accent, états sémantiques |
-| `typography` | Familles, tailles, graisses, interlignages |
-| `spacing` | Échelle de marges, paddings et gaps |
-| `radius` | Échelle de border-radius |
-| `shadow` | Élévation et profondeur |
-| `motion` | Durées, easing, alternatives reduced-motion |
-| `breakpoints` | Seuils de layout responsive |
-| `z-index` | Échelle de superposition pour overlays, navigation, modales |
+| Catégorie     | Rôle                                                        |
+| ------------- | ----------------------------------------------------------- |
+| `color`       | Fond, texte, accent, états sémantiques                      |
+| `typography`  | Familles, tailles, graisses, interlignages                  |
+| `spacing`     | Échelle de marges, paddings et gaps                         |
+| `radius`      | Échelle de border-radius                                    |
+| `shadow`      | Élévation et profondeur                                     |
+| `motion`      | Durées, easing, alternatives reduced-motion                 |
+| `breakpoints` | Seuils de layout responsive                                 |
+| `z-index`     | Échelle de superposition pour overlays, navigation, modales |
 
 L'implémentation vivra sous `src/styles/tokens/` une fois l'application existante. Voir [../architecture/README.md](../architecture/README.md) pour les sujets d'architecture associés.
 

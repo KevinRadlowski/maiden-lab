@@ -25,12 +25,12 @@ ADR-XXX-short-descriptive-title.md
 
 ## Valeurs de statut
 
-| Statut | Signification |
-|--------|---------------|
-| **Proposé** | En discussion ; pas encore adopté. |
-| **Accepté** | Décision active et à suivre. |
+| Statut       | Signification                                               |
+| ------------ | ----------------------------------------------------------- |
+| **Proposé**  | En discussion ; pas encore adopté.                          |
+| **Accepté**  | Décision active et à suivre.                                |
 | **Remplacé** | Supplanté par un ADR plus récent ; lier vers le successeur. |
-| **Déprécié** | Plus pertinent ; conservé pour l'historique. |
+| **Déprécié** | Plus pertinent ; conservé pour l'historique.                |
 
 ## Workflow
 
@@ -42,8 +42,11 @@ ADR-XXX-short-descriptive-title.md
 
 ## Index
 
-| ADR | Titre | Statut |
-|-----|-------|--------|
-| [ADR-000](./ADR-000-template.md) | Template | — |
+| ADR                                                | Titre                          | Statut  |
+| -------------------------------------------------- | ------------------------------ | ------- |
+| [ADR-000](./ADR-000-template.md)                   | Template                       | —       |
 | [ADR-001](./ADR-001-portfolio-product-strategy.md) | Stratégie produit du portfolio | Accepté |
-| [ADR-002](./ADR-002-documentation-language.md) | Langue de la documentation | Accepté |
+| [ADR-002](./ADR-002-documentation-language.md)     | Langue de la documentation     | Accepté |
+| [ADR-003](./ADR-003-angular-foundation.md)         | Fondations Angular             | Accepté |
+| [ADR-004](./ADR-004-rendering-strategy.md)         | Stratégie de rendu             | Accepté |
+| [ADR-005](./ADR-005-package-manager.md)            | Gestionnaire de packages       | Accepté |

@@ -1,0 +1,29 @@
+<div class="shell">
+  <header class="shell__header">
+    <a class="shell__brand" routerLink="/">Maiden Lab</a>
+    <nav class="shell__nav" aria-label="Navigation principale">
+      <ul class="shell__nav-list">
+        @for (item of navItems; track item.path) {
+          <li>
+            <a
+              class="shell__nav-link"
+              [routerLink]="item.path"
+              routerLinkActive="shell__nav-link--active"
+              [routerLinkActiveOptions]="{ exact: item.path === '/' }"
+            >
+              {{ item.label }}
+            </a>
+          </li>
+        }
+      </ul>
+    </nav>
+  </header>
+
+  <main class="shell__main" id="main-content">
+    <ng-content />
+  </main>
+
+  <footer class="shell__footer">
+    <p>© Kevin Radlowski — Maiden Lab</p>
+  </footer>
+</div>

@@ -36,14 +36,14 @@ const DEBOUNCE_MS = 350;
 
 Ne créez pas de branche sauf demande explicite pour une tâche donnée. Lorsqu'une branche est nécessaire, utilisez :
 
-| Préfixe | Usage |
-|---------|-------|
-| `feat/<scope>` | Nouvelle fonctionnalité |
-| `fix/<scope>` | Correction de bug |
-| `docs/<scope>` | Documentation uniquement |
-| `chore/<scope>` | Maintenance, mise en place d'outillage |
+| Préfixe            | Usage                                       |
+| ------------------ | ------------------------------------------- |
+| `feat/<scope>`     | Nouvelle fonctionnalité                     |
+| `fix/<scope>`      | Correction de bug                           |
+| `docs/<scope>`     | Documentation uniquement                    |
+| `chore/<scope>`    | Maintenance, mise en place d'outillage      |
 | `refactor/<scope>` | Refactoring sans changement de comportement |
-| `test/<scope>` | Ajout ou amélioration de tests |
+| `test/<scope>`     | Ajout ou amélioration de tests              |
 
 Exemples :
 
@@ -55,16 +55,16 @@ Exemples :
 
 Les commits suivent [Conventional Commits](https://www.conventionalcommits.org/) :
 
-| Type | Description |
-|------|-------------|
-| `feat:` | Nouvelle fonctionnalité |
-| `fix:` | Correction de bug |
-| `docs:` | Modification de documentation |
+| Type        | Description                            |
+| ----------- | -------------------------------------- |
+| `feat:`     | Nouvelle fonctionnalité                |
+| `fix:`      | Correction de bug                      |
+| `docs:`     | Modification de documentation          |
 | `refactor:` | Changement de code sans feature ni fix |
-| `test:` | Ajout ou correction de tests |
-| `chore:` | Maintenance, dépendances, outillage |
-| `perf:` | Amélioration de performance |
-| `ci:` | Configuration CI/CD |
+| `test:`     | Ajout ou correction de tests           |
+| `chore:`    | Maintenance, dépendances, outillage    |
+| `perf:`     | Amélioration de performance            |
+| `ci:`       | Configuration CI/CD                    |
 
 Exemples propres à Maiden Lab :
 
@@ -101,15 +101,12 @@ Les relecteurs (ou l'auteur en auto-revue) doivent vérifier :
 
 ## Definition of Done
 
-Utilisez cette checklist comme guide général. Les éléments marqués *prévu* s'appliquent une fois l'outillage correspondant en place.
+Utilisez cette checklist comme guide général avant toute livraison.
 
-- [ ] Le code compile et s'exécute localement *(une fois l'application existante)*
-- [ ] Le lint passe *(prévu)*
-- [ ] Le formatage est cohérent *(prévu)*
-- [ ] La vérification de types passe *(prévu)*
-- [ ] Les tests unitaires passent pour la logique concernée *(prévu)*
-- [ ] Les tests E2E passent pour les parcours concernés *(prévu, le cas échéant)*
-- [ ] L'accessibilité est vérifiée pour les changements UI *(outillage prévu ; revue manuelle en attendant)*
+- [ ] Le code compile et s'exécute localement (`npm start`)
+- [ ] `npm run check` passe (format, lint, tests CI, build)
+- [ ] Les tests E2E passent pour les parcours concernés (`npm run e2e`, le cas échéant)
+- [ ] L'accessibilité est vérifiée pour les changements UI (revue manuelle ; outillage avancé _prévu_)
 - [ ] L'impact performance est pris en compte pour les changements UI ou data
 - [ ] La documentation est mise à jour si le comportement ou l'architecture change
 - [ ] Un ADR est créé ou mis à jour pour les décisions techniques significatives

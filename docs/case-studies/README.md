@@ -50,12 +50,12 @@ Ces règles ne sont pas négociables :
 
 Utilisez des libellés clairs tout au long du contenu :
 
-| Libellé | Signification |
-|---------|---------------|
-| **En production** | Déployé ou accessible publiquement |
-| **En cours** | Développement actif |
-| **Prévu** | Intention confirmée, pas encore démarré |
-| **Archivé** | Plus maintenu |
+| Libellé           | Signification                           |
+| ----------------- | --------------------------------------- |
+| **En production** | Déployé ou accessible publiquement      |
+| **En cours**      | Développement actif                     |
+| **Prévu**         | Intention confirmée, pas encore démarré |
+| **Archivé**       | Plus maintenu                           |
 
 ## Documentation associée
 

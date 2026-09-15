@@ -46,3 +46,6 @@ temp/
 *.local
 .parcel-cache/
 .turbo/
+
+# Archives locales de transmission
+*.zip

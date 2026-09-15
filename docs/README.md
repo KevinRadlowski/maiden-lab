@@ -4,15 +4,15 @@ Index central de la documentation du dépôt Maiden Lab.
 
 ## Navigation rapide
 
-| Sujet | Emplacement | Description |
-|-------|-------------|-------------|
-| Architecture | [../ARCHITECTURE.md](../ARCHITECTURE.md) | Architecture applicative cible et état actuel |
-| Docs d'architecture | [architecture/](./architecture/) | Sujets d'architecture détaillés (à venir) |
-| ADR | [decisions/](./decisions/) | Architecture Decision Records |
-| Design system | [design-system/](./design-system/) | Principes visuels et d'interaction (prévu) |
-| Études de cas | [case-studies/](./case-studies/) | Template éditorial et règles de crédibilité |
-| Contribution | [../CONTRIBUTING.md](../CONTRIBUTING.md) | Workflow de développement et standards |
-| Changelog | [../CHANGELOG.md](../CHANGELOG.md) | Suivi des changements |
+| Sujet               | Emplacement                              | Description                                   |
+| ------------------- | ---------------------------------------- | --------------------------------------------- |
+| Architecture        | [../ARCHITECTURE.md](../ARCHITECTURE.md) | Architecture applicative cible et état actuel |
+| Docs d'architecture | [architecture/](./architecture/)         | Sujets d'architecture détaillés (à venir)     |
+| ADR                 | [decisions/](./decisions/)               | Architecture Decision Records                 |
+| Design system       | [design-system/](./design-system/)       | Principes visuels et d'interaction (prévu)    |
+| Études de cas       | [case-studies/](./case-studies/)         | Template éditorial et règles de crédibilité   |
+| Contribution        | [../CONTRIBUTING.md](../CONTRIBUTING.md) | Workflow de développement et standards        |
+| Changelog           | [../CHANGELOG.md](../CHANGELOG.md)       | Suivi des changements                         |
 
 ## Périmètre actuel
 
