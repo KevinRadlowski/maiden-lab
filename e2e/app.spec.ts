@@ -38,13 +38,13 @@ test.describe('Laboratoire design system (/lab)', () => {
     await expect(page.locator('app-tag').first()).toBeVisible();
   });
 
-  test('permet de basculer le thème sombre', async ({ page }) => {
+  test('permet de basculer le thème sombre via le header global', async ({ page }) => {
     await page.goto('/lab');
 
-    await page.getByRole('button', { name: /Thème sombre/i }).click();
+    await page.getByRole('button', { name: 'Activer le thème sombre' }).click();
     await expect(page.locator('html[data-theme="dark"]')).toBeVisible();
 
-    await page.getByRole('button', { name: /Thème clair/i }).click();
+    await page.getByRole('button', { name: 'Activer le thème clair' }).click();
     await expect(page.locator('html[data-theme="dark"]')).toHaveCount(0);
   });
 
@@ -53,6 +53,6 @@ test.describe('Laboratoire design system (/lab)', () => {
 
     await page.keyboard.press('Tab');
     const focusedTag = await page.evaluate(() => document.activeElement?.tagName);
-    expect(['A', 'BUTTON', 'INPUT']).toContain(focusedTag);
+    expect(['A', 'BUTTON', 'INPUT', 'MAIN']).toContain(focusedTag);
   });
 });

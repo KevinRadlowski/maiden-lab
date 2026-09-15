@@ -1,0 +1,65 @@
+<header class="header">
+  <div class="header__bar container container--wide">
+    <app-brand />
+
+    <nav class="header__nav header__nav--desktop" aria-label="Navigation principale">
+      <ul class="header__nav-list">
+        @for (item of navItems; track item.path) {
+          <li>
+            <a
+              class="header__nav-link"
+              [routerLink]="item.path"
+              routerLinkActive="header__nav-link--active"
+              [routerLinkActiveOptions]="{ exact: item.exact }"
+              ariaCurrentWhenActive="page"
+            >
+              {{ item.label }}
+            </a>
+          </li>
+        }
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <app-theme-toggle />
+      <button
+        #menuButton
+        type="button"
+        class="header__menu-button"
+        [attr.aria-expanded]="mobileMenuOpen()"
+        [attr.aria-controls]="mobileNavId"
+        (click)="toggleMobileMenu()"
+      >
+        <span class="header__menu-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">
+          {{ mobileMenuOpen() ? 'Fermer le menu' : 'Ouvrir le menu' }}
+        </span>
+      </button>
+    </div>
+  </div>
+
+  @if (mobileMenuOpen()) {
+    <nav
+      [id]="mobileNavId"
+      class="header__nav header__nav--mobile container container--wide"
+      aria-label="Navigation principale mobile"
+    >
+      <ul class="header__nav-list header__nav-list--mobile">
+        @for (item of navItems; track item.path) {
+          <li>
+            <a
+              class="header__nav-link header__nav-link--mobile"
+              [routerLink]="item.path"
+              routerLinkActive="header__nav-link--active"
+              [routerLinkActiveOptions]="{ exact: item.exact }"
+              ariaCurrentWhenActive="page"
+              (click)="closeMobileMenu()"
+            >
+              {{ item.label }}
+            </a>
+          </li>
+        }
+      </ul>
+    </nav>
+  }
+</header>

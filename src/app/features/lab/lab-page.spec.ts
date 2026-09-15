@@ -27,15 +27,6 @@ describe('LabPage', () => {
     );
   });
 
-  it('should toggle dark theme on document element', () => {
-    const fixture = TestBed.createComponent(LabPage);
-    fixture.detectChanges();
-    fixture.componentInstance.toggleTheme();
-    expect(document.documentElement.getAttribute('data-theme')).toBe('dark');
-    fixture.componentInstance.toggleTheme();
-    expect(document.documentElement.hasAttribute('data-theme')).toBe(false);
-  });
-
   it('should expose design system specimens', () => {
     const fixture = TestBed.createComponent(LabPage);
     fixture.detectChanges();

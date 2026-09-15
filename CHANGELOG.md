@@ -8,6 +8,13 @@ Aucune version n'a encore été publiée. Les entrées ci-dessous suivent le tra
 
 ## [Unreleased]
 
+### Added (LOT 03)
+
+- Shell MAIDEN/LAB : header sticky, navigation desktop/mobile, footer, marque typographique.
+- Thème global light/dark avec persistance (`maidenlab-theme`) et script pré-bootstrap anti-FOUC.
+- ThemeService, NavigationFocusService, skip link, focus après navigation SPA.
+- ADR-007 — stratégie de thème global.
+
 ### Added
 
 - Gouvernance initiale du dépôt et documentation de fondation.

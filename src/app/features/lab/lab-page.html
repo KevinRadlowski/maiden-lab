@@ -5,11 +5,6 @@
     <p class="text-body-lg text-muted text-measure">
       Laboratoire visuel — spécimen des tokens, composants et principes éditoriaux du portfolio.
     </p>
-    <div>
-      <app-button variant="secondary" (click)="toggleTheme()">
-        Thème {{ theme() === 'light' ? 'sombre' : 'clair' }}
-      </app-button>
-    </div>
   </header>
 
   <app-divider />
@@ -192,8 +187,8 @@
     <app-section-label index="12" title="Dark mode" />
     <h2 id="lab-dark" class="visually-hidden">Dark mode</h2>
     <p class="text-measure text-muted">
-      Tokens sémantiques adaptés via <code>[data-theme='dark']</code>. Utilisez le bouton en tête de
-      page pour basculer le thème dans ce laboratoire.
+      Tokens sémantiques adaptés via <code>[data-theme='dark']</code>. Utilisez le contrôle de thème
+      du header global pour basculer entre les modes clair et sombre.
     </p>
   </section>
 </app-container>

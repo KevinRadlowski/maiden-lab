@@ -158,7 +158,9 @@ Gutters : `--gutter` (clamp responsive). Mobile : grille en 1 colonne ; tablette
 
 - Défaut : light (`:root`)
 - Dark : `[data-theme='dark']` sur `<html>`
-- Toggle de démonstration sur `/lab` ; persistance globale au lot navigation
+- **Thème global (LOT 03)** : contrôle dans le header (`app-theme-toggle`), persistance `localStorage` (`maidenlab-theme`), fallback `prefers-color-scheme` si aucune préférence enregistrée
+- **Application pré-bootstrap** : script inline minimal dans `index.html` pour éviter le flash de thème au premier rendu (voir [ADR-007](../decisions/ADR-007-theme-strategy.md))
+- `/lab` documente le dark mode mais utilise le même système global — pas de toggle local
 
 ## Composants UI
 

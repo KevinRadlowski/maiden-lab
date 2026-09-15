@@ -51,3 +51,4 @@ ADR-XXX-short-descriptive-title.md
 | [ADR-004](./ADR-004-rendering-strategy.md)         | Stratégie de rendu             | Accepté |
 | [ADR-005](./ADR-005-package-manager.md)            | Gestionnaire de packages       | Accepté |
 | [ADR-006](./ADR-006-design-system-foundation.md)   | Fondations du design system    | Accepté |
+| [ADR-007](./ADR-007-theme-strategy.md)             | Stratégie de thème global      | Accepté |

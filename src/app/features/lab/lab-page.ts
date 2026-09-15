@@ -1,12 +1,10 @@
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Button } from '../../shared/ui/button/button';
 import { Container } from '../../shared/ui/container/container';
 import { Divider } from '../../shared/ui/divider/divider';
 import { SectionLabel } from '../../shared/ui/section-label/section-label';
 import { Tag } from '../../shared/ui/tag/tag';
 import { TextLink } from '../../shared/ui/text-link/text-link';
-
-type ThemeMode = 'light' | 'dark';
 
 @Component({
   selector: 'app-lab-page',
@@ -16,8 +14,6 @@ type ThemeMode = 'light' | 'dark';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LabPage {
-  protected readonly theme = signal<ThemeMode>('light');
-
   protected readonly colorSwatches = [
     { name: 'Bleu signature', token: '--blue-500', primitive: true },
     { name: 'Bleu profond', token: '--blue-600', primitive: true },
@@ -41,14 +37,4 @@ export class LabPage {
     { name: 'space-12', size: 'var(--space-12)', value: '3 rem' },
     { name: 'space-16', size: 'var(--space-16)', value: '4 rem' },
   ] as const;
-
-  toggleTheme(): void {
-    const next: ThemeMode = this.theme() === 'light' ? 'dark' : 'light';
-    this.theme.set(next);
-    if (next === 'dark') {
-      document.documentElement.setAttribute('data-theme', 'dark');
-    } else {
-      document.documentElement.removeAttribute('data-theme');
-    }
-  }
 }
